@@ -55,7 +55,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.svg",
 	name: "Damir Dulic",
-	bio: "Systems Engineering Lead",
+	bio: "Hey, I'm a highly passionate and eager to learn System Engineering Lead who geeks out on tech, games, and anime.\n\nI write about Infrastructure, Software, Productivity, and whatever else I feel like...",
 	links: [
 		{
 			name: "LinkedIn",
