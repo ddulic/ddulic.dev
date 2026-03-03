@@ -57,8 +57,3 @@ Update: [markdown-resume](https://github.com/there4/markdown-resume/blob/master
 # **Final Thoughts**
 
 It is so relaxing to be able to edit once and update both my resume PDF and my resume page. The next step is to update my LinkedIn profile via [api](https://developer.linkedin.com/docs/guide/v2/people/profile-edit-api#) 🤔
-
----
-
-
----

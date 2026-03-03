@@ -26,7 +26,7 @@ Before we start, we assume that you have the following:
 
 I will assume you have an [aws_acm_certificate_validation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acm_certificate_validation) already setup (ACM CloudFront Certificates have to live in us-east-1)
 
-```
+```hcl
 resource "aws_acm_certificate_validation" "certificate" {
   certificate_arn         = aws_acm_certificate.certificate.arn
   validation_record_fqdns = [for record in aws_route53_record.certificate_validation : record.fqdn]
@@ -35,7 +35,7 @@ resource "aws_acm_certificate_validation" "certificate" {
 
 Tip: use [aws_acm_certificate](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/acm_certificate) to keep your ACM record validations in Terraform. Using DNS as a validation method makes it even easier to manage.
 
-```
+```hcl
 resource "aws_acm_certificate" "certificate" {
   domain_name = var.domain_name
 
@@ -72,7 +72,7 @@ resource "aws_route53_record" "certificate_validation" {
 
 This Certificate should be referenced in your [aws_cloudfront_distribution](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudfront_distribution) resource
 
-```
+```hcl
 resource "aws_cloudfront_distribution" "distribution" {
   # ...
   viewer_certificate {
@@ -90,7 +90,7 @@ resource "aws_cloudfront_distribution" "distribution" {
 
 This is the easy part, you just have to copy the current certificate block and rename the resource. Isn’t IaC amazing?
 
-```
+```hcl
 resource "aws_acm_certificate" "new_certificate" {
   domain_name = var.domain_name
 
@@ -114,7 +114,7 @@ Because we are using the `aws_acm_certificate_validation.certificate.certificate
 
 Modify the value of `certificate` in the `aws_acm_certificate_validation.certificate` Resource
 
-```
+```hcl
 resource "aws_acm_certificate_validation" "certificate" {
   certificate_arn         = aws_acm_certificate.new_certificate.arn
   validation_record_fqdns = [for record in aws_route53_record.certificate_validation : record.fqdn]
@@ -127,7 +127,7 @@ Run your pipeline and make this is `terraform apply`ed.
 
 To prevent deletions, we will have to move some items around in the Terraform State. If you are updating the Certificate to add/remove SANs, the validation records will be updated automatically.
 
-```
+```bash
 ❯ terraform state mv 'module.module_name.aws_acm_certificate.certificate' 'module.module_name.aws_acm_certificate.old_certificate'
 Move "module.module_name.aws_acm_certificate.certificate" to "module.module_name.aws_acm_certificate.old_certificate"
 Successfully moved 1 object(s).
@@ -147,6 +147,9 @@ Update your code to match the above renames, so you are renaming:
     - aws_acm_certificate.new_certificate.arn → aws_acm_certificate.certificate.arn
 - Resource aws_acm_certificate.new_certificate → aws_acm_certificate.certificate
 
+:::warning
+You must modify the state before you plan and apply, make sure to lock the pipeline for this process.
+:::
 
 After the resources have been renamed, run your pipeline and make this is `terraform apply`ed. There should be no ACM or CloudFront changes.
 
@@ -166,5 +169,3 @@ Switching to a new CloudFront ACM Certificate without any downtime is a straight
 By following the steps outlined in this post, you can make the switch seamlessly and without any disruptions to your users.
 
 I hope you found this helpful.
-
----

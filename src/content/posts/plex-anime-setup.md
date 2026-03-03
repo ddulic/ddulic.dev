@@ -125,8 +125,3 @@ In the end, your structure will involve experimentation to see what works for yo
 Create a new TV Shows library in Plex and select the folder where all your anime is kept. **IMPORTANT:** Before adding the library, go into “Advanced” and change the **Scanner** to Absolute Series Scanner and the **Agent** to HamaTV and you can keep the rest as default. If you want, you can also change the languages all the way at the bottom, but I like to keep the defaults.
 
 Enjoy watching anime (/^▽^)/
-
----
-
-
----

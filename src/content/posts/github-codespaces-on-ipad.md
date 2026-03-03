@@ -11,7 +11,7 @@ draft: false
 
 In this post, I will investigate if it is possible to use the iPad Pro for "coding" with GitHub Codespaces.
 
-I have an iPad Pro 2020 12.9" and it is a wonderful tool, the fluent 120hz display makes reading, watching videos (although most are locked at 30), and even navigating the UI pure joy. The only thing I was missing was being able to code and publish [my website](https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-codespaces/) with it. 
+I have an iPad Pro 2020 12.9" and it is a wonderful tool, the fluent 120hz display makes reading, watching videos (although most are locked at 30), and even navigating the UI pure joy. The only thing I was missing was being able to code and publish [my website](https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-codespaces/) with it.
 
 ![](../../assets/images/github-codespaces-on-ipad/x6GXT60ButydQ9kiN.png)
 
@@ -66,7 +66,7 @@ After turning it on in my main VSCode... most of the things worked, I didn’t e
 Given that the environment is just a Debian Docker image, we can configure it while we are in it with the built-in VSCode Terminal, or we can even go much deeper with a `devcontainer.json` file which we would place in the root of our project. You can find the container configuration documentation [here](https://github.com/MicrosoftDocs/vscodespaces/blob/live/vs-online/reference/configuring.md).
 
 ```bash
-codespace:~/workspace/damir.tech$ cat /etc/os-release 
+codespace:~/workspace/damir.tech$ cat /etc/os-release
 PRETTY_NAME="Debian GNU/Linux 9 (stretch)"
 NAME="Debian GNU/Linux"
 VERSION_ID="9"
@@ -84,7 +84,7 @@ All of that is nice and all, but how it works, well, it turns out that it works 
 
 The last two posts have been mostly published via GitHub Codespaces, working from my iPad. I say mostly because I use Notion on the iPad to write up the drafts, however, [copy and paste is broken](https://twitter.com/_ddulic/status/1328272880711430144) in their iPad app...
 
-For this repository ([https://github.com/ddulic/damir.tech](https://github.com/ddulic/damir.tech)) I just needed a few tools to get me up and running...
+For this repository ([ddulic/damir.tech](https://github.com/ddulic/damir.tech)) I just needed a few tools to get me up and running...
 
 I required [Hugo](https://gohugo.io/), and the simplest way to install Hugo is with [brew](https://brew.sh).
 
@@ -98,12 +98,15 @@ hugo server --baseURL https://${CLOUDENV_ENVIRONMENT_ID}-1313.apps.codespaces.gi
 
 The [Hugo Helper](https://marketplace.visualstudio.com/items?itemName=rusnasonov.vscode-hugo) extension was ported with my settings, and it worked like a charm.
 
-Everything else is the same, I use `git` in the terminal and everything gets pulled in automatically from GitHub. 
+Everything else is the same, I use `git` in the terminal and everything gets pulled in automatically from GitHub.
 
 It does NOT pull changes automatically, you still need to do a manual `git pull` if you make changes outside Codespaces.
 
 # Conclusion
 
+:::note
+TLDR: Codespaces ain’t there yet (at least for the iPad), but there is huge potential
+:::
 
 Codespaces has its issues (it is still in early access for a reason) and it will be years before it can replace a native desktop experience. For now, it is for the people who just need to code “a bit” and don’t do it full-time.
 
@@ -119,11 +122,7 @@ I will still use it whenever I must code out of work, as I am stubborn and have 
 
 ---
 
-Liked the post? Interested in more? Follow me on [LinkedIn](https://www.linkedin.com/in/ddulic/) and/or [Twitter](https://twitter.com/_ddulic) :)
+Liked the post? Interested in more? Follow me on [LinkedIn](https://www.linkedin.com/in/ddulic/).
 
 Stay safe!
 
----
-
-
----

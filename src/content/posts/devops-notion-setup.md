@@ -49,13 +49,13 @@ This is where you will be 90% of the time.
 Apologies for the truncation, you understand.
 
 - Properties
-    
+
     ![](../../assets/images/devops-notion-setup/nFt4i2aWW8PmEf4FO.png)
-    
+
 - Templates
-    
+
     ![](../../assets/images/devops-notion-setup/bs2kg5bgoiy1eMRkM.png)
-    
+
 
 Ticket Template
 
@@ -72,11 +72,11 @@ Participants: <name>,
 
 Agenda:
 
-- 
+-
 
 Todo:
 
-- [ ] 
+- [ ]
 
 ---
 
@@ -127,34 +127,34 @@ Week Template
 ```markdown
 ### Monday
 
-> 
-- 
+>
+-
 
 ### Tuesday
 
 >
-- 
+-
 
 ### Wednesday
 
 >
-- 
+-
 
 ### Thursday
 
 >
-- 
+-
 
 ### Friday
 
 >
-- 
+-
 
 ---
 
 ### Weekend
 
-- [ ]  
+- [ ]
 -
 ```
 
@@ -175,8 +175,3 @@ I will **not** be posting a Notion template as I find them pretty useless. Copin
 Thanks for taking the time to read.
 
 Stay safe and have a great day!
-
----
-
-
----

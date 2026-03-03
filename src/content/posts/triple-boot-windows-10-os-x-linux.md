@@ -17,8 +17,11 @@ The first decision I had to do is pick a distro, I of course immediately went ov
 
 The installation is standard, but for the `/boot/efi` (you also have to run the USB in EFI mode in order for the triple boot to work) we have to choose the EFI partition where Clover and the other bootloaders reside.
 
-![](../../assets/images/triple-boot-windows-10-os-x-linux/quad_boot.jpg)
+:::warning
+WARNING: DO NOT FORMAT, MAKE SURE FORMAT IS NOT CHECKED!
+:::
 
+![](../../assets/images/triple-boot-windows-10-os-x-linux/quad_boot.jpg)
 
 This will install antergos grub to this partition, so Clover can attempt to find it. After finishing the installation you should all know by now, reboot the machine, and it will boot into Antergos(🙌 hooray… kinda), the direct boot into Antergos is normal since a fresh OS install always replaces the default bootloader to the one in the system you are installing uses. To see if this was successful, we need to boot Clover and see if it was added to the boot list. Reboot into the UEFI and put Clover (OS X) to be the default boot again and boot up. We can see that we didn’t screw up the other systems since they are showing up, but there is no Linux… what?!?! The problem here is that it seems Clover doesn’t auto-detect Arch Linux (which is what Antergos is) by default like it does with Windows and Ubuntu/Fedora (as I found out later). I Googled a bit and couldn’t find a way to correctly edit the config.plist to add Arch manually so Clover would see it. I don’t know about you, but I want everything to be in a single bootloader, I see no point in swapping bootloaders to boot into the system I want.
 
@@ -35,8 +38,3 @@ I freed up some more space (I didn’t want to remove Ubuntu because I didn’t 
 I think I will be keeping Fedora for a while. I will also be posting a customization guide to Fedora soon 🙂
 
 Thanks for reading and have a great day ^_^
-
----
-
-
----

@@ -22,8 +22,3 @@ On the not Linux related side, I also listen to The [#AskGaryVee Show](https://
 As for my player. I use [Pocket Casts](http://www.shiftyjelly.com/android/pocketcasts) on both my phone and my desktop (web player with a [dark stylish theme](https://userstyles.org/styles/121199/pocket-casts-night-mode-complete))
 
 That is all.
-
----
-
-
----

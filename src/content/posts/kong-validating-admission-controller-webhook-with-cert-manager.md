@@ -141,6 +141,10 @@ webhooks:
 
 Note that we do not need the `caBundle` as we are generating it with cert-manager.
 
+:::warning
+Make sure you deploy the ValidatingWebhookConfiguration after the certificate has been generated and deployment updated. If you deploy the VAC first, any deploy that is relatable to the resources listed above will fail, maybe even others, due to the certificate miss-match.
+:::
+
 
 ```
 Error from server (InternalError): error when creating "STDIN": Internal error occurred: failed calling webhook "validations.kong.konghq.com": Post https://kong-validation-webhook.kong.svc:443/?timeout=30s: x509: certificate signed by unknown authority (possibly because of "x509: invalid signature: parent certificate cannot sign this kind of certificate" while trying to verify candidate authority certificate "kong-validation-webhook.kong.svc")
@@ -177,11 +181,6 @@ Thanks for taking the time to read! Hopefully, this short guide will help you se
 
 ---
 
-Liked the post? Interested in more? Follow me on [LinkedIn](https://www.linkedin.com/in/ddulic/) and/or [Twitter](https://twitter.com/_ddulic).
+Liked the post? Interested in more? Follow me on [LinkedIn](https://www.linkedin.com/in/ddulic/)
 
 Have a lovely day and stay safe!
-
----
-
-
----

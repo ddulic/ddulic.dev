@@ -7,9 +7,6 @@ category: Blogging
 draft: false
 ---
 
----
-
-
 # Introduction
 
 Recently, I have been playing around with golang and because I am bored, at home, and quarantined, so I decided why not migrate my website from Hexo to Hugo.
@@ -20,9 +17,9 @@ There are a few reasons why I decided to make the leap:
 - Easier updates. I forget how to update the website every single time, Hexo updates are too complicated, I spend 1-2h every time configuring all the changes
 - Hugo offers better code block support and syntax highlighting (it even supports Nginx and systemd)
 - I am sick of Node security updates. Every other week, there is some new security vulnerability
-    
+
     ![](../../assets/images/migrate-hexo-to-hugo/nvNNsuPkfdu6n9te0.png)
-    
+
 - I have wanted to do a rewrite to my original [website](https://damir.tech/2018-website-continuous-deployment-pipeline/) and [resume](https://damir.tech/2018-resume-continuous-deployment-pipeline/) CI/CD approach. The original implementation worked like a dream but always felt a bit too hacky.
 - I wanted to experiment more with golang and having my website in go would force me to do so
 
@@ -154,8 +151,3 @@ I didn’t do a speed test on Hexo, but Hugo scores 100 for Desktop and 99 for m
 One noticeable change is that the website feels a lot snappier, but this could also just be since there are fewer animations, and they are faster.
 
 Have a productive day, stay safe!
-
----
-
-
----

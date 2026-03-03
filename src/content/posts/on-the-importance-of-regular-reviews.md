@@ -28,5 +28,3 @@ Here are some examples of how to set up a regular review:
 - **Yearly review:** Take a day or two each year to review the past year, set goals for the upcoming year, and declutter your physical and digital spaces. This can help you reflect on your accomplishments and make plans for the future.
 
 By setting aside regular time for reviews, you can stay on top of things and avoid the chaos and clutter that comes with modern life.
-
----

@@ -76,9 +76,9 @@ Note: Due to the way CloudFront works in caching our content, your changes won't
 
 This is nice and all, but how much will this cost me? -- Well, it will cost you almost nothing compared to other hosting providers. AWS does an estimation [here](https://aws.amazon.com/getting-started/projects/host-static-website/) which says:
 
-The total cost of hosting your static website on AWS will vary depending on your usage. Typically, it will cost $1-3/month if you are outside the AWS Free Tier limits. If you qualify for AWS Free Tier and are within the limits, hosting your static website will cost around $0.50/month.
+The total cost of hosting your static website on AWS will vary depending on your usage. Typically, it will cost \$1-3/month if you are outside the AWS Free Tier limits. If you qualify for AWS Free Tier and are within the limits, hosting your static website will cost around \$0.50/month.
 
-In my case, so far, it is costing just as they said, $0.50/month since I am still in the free tier.
+In my case, so far, it is costing just as they said, \$0.50/month since I am still in the free tier.
 
 # **Final Thoughts**
 
@@ -90,8 +90,3 @@ I still have some ideas for possible improvements, like:
 - ~~let's encrypt certificate renew via a Lambda~~
 
 Time to start playing with lambda :)
-
----
-
-
----

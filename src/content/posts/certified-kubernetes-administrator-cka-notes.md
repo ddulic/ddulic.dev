@@ -15,8 +15,9 @@ I wanted to share my notes on the recent course I watched preparing for the [CKA
 
 The course is well-made and extremely detailed. The free practice labs are a great help as well, hands-on is always best, a belief I have had for years as can be seen by an old tweet of mine.
 
-[https://twitter.com/_ddulic/status/723430154857385984?s=20](https://twitter.com/_ddulic/status/723430154857385984?s=20)
-
+:::note
+These notes shouldn't replace notes you would take yourself!
+:::
 
 As with other similar notes I have done ([AWS Well-Architected Framework Notes](https://ddulic.dev/aws-well-architected-framework-notes)) these notes are mostly for me, but I decided to take the minimal effort to open them up in the hopes that someone else finds them useful as well.
 
@@ -32,19 +33,11 @@ As for the somewhat weird format... I use the Second Brain Methodology for organ
 
 # Useful Resources
 
-Some blog posts I read up before to prepare for the Exam (grabbed from [Pocket](https://getpocket.com)).
+Some blog posts I read up before to prepare for the Exam (grabbed from [Pocket](https://getpocket.com))
 
-[Strategy: How to pass CKA Exam with less stress | vMantra.in](https://vmantra.in/strategy-how-to-pass-cka-exam-with-less-stress)
-
-[My experience passing CKA and CKAD](https://web.archive.org/web/20210227000628/https://blog.cuffaro.com/blog/2021/01/24/cka-ckad)
-
-[Be fast with Kubectl 1.18 (CKAD/CKA)](https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443)
-
-# Bookmarks
-
-Here are the CKA Exam Bookmarks I used during the Exam. Importing the below file into your browser will add a "CKA Exam" folder with all the bookmarks.
-
-[cka_bookmarks_2021.html](Certified%20Kubernetes%20Administrator%20(CKA)%20Notes/cka_bookmarks_2021.html)
+- [Strategy: How to pass CKA Exam with less stress | vMantra.in](https://vmantra.in/strategy-how-to-pass-cka-exam-with-less-stress)
+- [My experience passing CKA and CKAD](https://web.archive.org/web/20210227000628/https://blog.cuffaro.com/blog/2021/01/24/cka-ckad)
+- [Be fast with Kubectl 1.18 (CKAD/CKA)](https://faun.pub/be-fast-with-kubectl-1-18-ckad-cka-31be00acc443)
 
 # Core Concepts
 
@@ -91,9 +84,15 @@ Here are the CKA Exam Bookmarks I used during the Exam. Importing the below file
 - **Sends back regular reports on the node**
 - **Communicates with the container runtime engine to manage pods**
 
+:::note
+Kubeadm does not deploy kubelets
+:::
 
 ## Kube-proxy
 
+:::note
+Not actually a proxy
+:::
 
 - **It manages services, they are virtual components that live in the k8s memory**
 - `kube-proxy` is a process that runs on each node in the cluster
@@ -103,6 +102,9 @@ Here are the CKA Exam Bookmarks I used during the Exam. Importing the below file
 
 ## ReplicaSets
 
+:::note
+ReplicaitonController IS NOT a ReplicaSet. ReplicaSets are newer and replace ReplicationControllers
+:::
 
 ```bash
 kubectl get replicaset
@@ -158,12 +160,19 @@ kubectl expose deployment simple-webapp-deployment --name=webapp-service --targe
 
 ![](../../assets/images/certified-kubernetes-administrator-cka-notes/Screenshot_2021-04-26_at_16.48.17.png)
 
+:::note
+kubectl create is imperative and kubectl apply is declarative.
+:::
 
 Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379
 
 ```bash
 kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
 ```
+
+:::warning
+WE CAN'T MIX IMPERATIVE AND DECLARATIVE COMMANDS
+:::
 
 
 ## Kubernetes YAML Manifest
@@ -249,6 +258,9 @@ spec:
     effect: "NoSchedule"
 ```
 
+:::note
+Taints and toleration don't tell a pod to go to a specific Node, it instead tells Nodes not to accept certain pods!
+:::
 
 **The scheduler doesn't schedule any pods on the Master node as there is a Taint set by default when setting up the cluster. This is the best practice!** To see this taint run the following
 
@@ -582,6 +594,9 @@ spec:
 - kubelet and kube-proxy can be `x-2`
 - kubectl can be x+1 > x-1 (this is for live upgrading)
 
+:::warning
+You should always upgrade one minor version at a time.
+:::
 
 The upgrade process depends on the cluster setup, GKE and EKS allow for easier upgrading.
 
@@ -644,6 +659,9 @@ All the communication to the cluster and between the cluster components is secur
 
 The API server authenticates the request before processing it, you can have passwords or tokens in a file or auth with certs, or even use LDAP.
 
+:::note
+This Basic Auth is deprecated in Kubernetes 1.19...
+:::
 
 Static Password/Token Files, this uses a `.csv` file, and we pass it to the kube-apiserver.
 
@@ -959,6 +977,9 @@ ingress:
     port: 3306
 ```
 
+:::note
+Not all Network Solutions support Network Policies! You can create the policies, but they will not be enforced.
+:::
 
 **When you allow ingress, you are automatically allowing egress on the same port.**
 
@@ -1150,7 +1171,7 @@ To delete a PVC, run
 kubectl delete pvc claim_name
 ```
 
-**You can choose what happens to the volume when the claim is deleted via `persistentVolumeReclaimPolicy`.** 
+**You can choose what happens to the volume when the claim is deleted via `persistentVolumeReclaimPolicy`.**
 
 **There are 3 options here:**
 
@@ -1221,8 +1242,11 @@ Change `0` to `1` to allow forwarding.
 
 ## Pre - Network Namespaces
 
+:::note
+Excellent Networking video. I will need to rewatch a few times.
+:::
 
-[](https://www.udemy.com/join/login-popup/?next=/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14296142)
+[udemy/certified-kubernetes-administrator-with-practice-tests](https://www.udemy.com/join/login-popup/?next=/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14296142)
 
 Within containers, the processes are isolated in an NS.
 
@@ -1302,8 +1326,11 @@ ip netns exec blue ip route add default via 192.168.15.5
 
 ## Pre - Docker Networking
 
+:::note
+Another excellent Networking video. I will need to rewatch a few times as well
+:::
 
-[](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14296144#announcements)
+[udemy/certified-kubernetes-administrator-with-practice-tests](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14296144#announcements)
 
 There are multiple docker networking types
 
@@ -1432,8 +1459,11 @@ The config file is located in `/etc/coredns/Corefile`.
 
 ## Ingress
 
+:::note
+Superb overall explanations of what an Ingress does and how it works.
+:::
 
-[](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14296170)
+[udemy/certified-kubernetes-administrator-with-practice-tests](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/learn/lecture/14296170)
 
 **Ingress helps the service users access it with a single externally accessible URL that we can configure to route to a different service based on paths and even implement SSL.**
 
@@ -1514,7 +1544,7 @@ node01  4
 Finally, we can also just sort the output
 
 ```bash
-❯ kubectl get pv --sort-by=.spec.capacity.storage     
+❯ kubectl get pv --sort-by=.spec.capacity.storage
 NAME       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
 pv-log-4   40Mi       RWX            Retain           Available                                   28m
 pv-log-1   100Mi      RWX            Retain           Available                                   28m

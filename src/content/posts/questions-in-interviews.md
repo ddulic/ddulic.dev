@@ -13,9 +13,9 @@ During all the chaos that is happening in the world at the time of writing this,
 
 Before I did, I had the opportunity to conduct a few interviews and there was one common thing I noticed among all the rejected interviewees, it was that they didn't ask us (the interviewers) enough (in some cases even any) questions and seemed uninterested in the whole process.
 
-They just looked like they wanted to get it over with, which I can understand, interviews are never fun as you and your knowledge is being put on the spot. You are being judged by every decision you make. 
+They just looked like they wanted to get it over with, which I can understand, interviews are never fun as you and your knowledge is being put on the spot. You are being judged by every decision you make.
 
-Yet, that doesn't mean you shouldn't look at it as a good learning and fun experience. 
+Yet, that doesn't mean you shouldn't look at it as a good learning and fun experience.
 
 You get to see how another company handles the process, you get a chance to ask the people who worked on it and see what made them make certain decisions, show them how you are eager to understand and curious about the processes.
 
@@ -42,8 +42,3 @@ And remember, there is nothing wrong if you don't get the role, you might not be
 Or you might not be good enough, if this is the case, again, don't be discouraged, keep doing interviews and come back in a few years and show them what you learned and why they would be happy to have you!
 
 Have fun!
-
----
-
-
----

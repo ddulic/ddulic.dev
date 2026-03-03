@@ -30,21 +30,21 @@ There are a couple of reasons why I decided to do this.
 
 1. I use Notion for everything already, so why not as a CMS for my website, given that it is plausible.
 2. Easier updates!
-    
+
     ![](https://media.giphy.com/media/NaboQwhxK3gMU/source.gif)
-    
+
     - A few years ago it made sense for me to show off my DevOps skills and create a website that showcased my understanding of git, AWS, CI/CD and other DevOps related skills, I think I am now at the point in my career where my experience shows for itself.
     - I want to write more and have caught my self refraining from doing so because updating and adding a new post has become a hassle. I would like to break down barriers and make it easier to add new posts and update old ones.
     - Furthermore, I commit multiple times a day at work, and I got sick of having to make commits to publish/update posts. I managed to make it more efficient by using GitHub Actions, but it just wasn’t quick enough to publish/update a post.
     - Updates to my website in Notion take less than 10 seconds to in order for the change to be visible on the [super.so](https://super.so?via=ddulic) static website.
     - All of the above results to almost 0 upkeep.
 3. I kind of like the Notion design anyway, plus it gives me much more flexibility over the design of posts when using it as a CMS.
-4. Lower costs! 
-    
+4. Lower costs!
+
     “But I took a look at [super.so](https://super.so/?via=ddulic) it costs more than your previous setup”
-    
+
     True, but I save a lot of time (see other reasons). My time to me is worth more than the price difference. I also managed to lock in a lower price as an “early adopter”, let’s see how long that lasts...
-    
+
 
 Those are all the pros, let’s take a look at some cons.
 
@@ -59,6 +59,9 @@ How can something so fundamental as copy-paste [not work](https://twitter.com/_d
 - No easy dark theme support at the time of writing (they have [guides](https://super.so/guides/colors) on how you can change the colours, but for some reason, this doesn't work for me and I would prefer if the users could have a toggle to choose the theme, just like [fruition](https://fruitionsite.com)).
 - As every change is almost immediately picked up by Super, there is a chance users can view your website while you are in the process of making a change to it and think your website is a mess or incomplete.
 
+:::note
+Update: I made a [post](https://community.super.so/c/showcase/why-i-migrated-my-blog-to-notion-using-super) on the Super Community and the co-founder replied the same that stating that they will fix most of the drawbacks in the next release!
+:::
 
 [super.so](https://super.so/?via=ddulic) can’t compare to a fully customizable website, but this is a compromise I am OK with.
 
@@ -69,16 +72,10 @@ If you want, you can copy most of the layout I have by just taking a look at how
 ---
 
 Super also just published the below video, which gives you a good overview of how it works.
-
-[https://www.youtube.com/watch?v=1zWiz7xL3q0](https://www.youtube.com/watch?v=1zWiz7xL3q0)
+<iframe width="100%" height="468" src="https://www.youtube.com/watch?v=1zWiz7xL3q0" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 
 ---
 
-Liked the post? Interested in more? Follow me on [LinkedIn](https://www.linkedin.com/in/ddulic/) and/or [Twitter](https://twitter.com/_ddulic).
+Liked the post? Interested in more? Follow me on [LinkedIn](https://www.linkedin.com/in/ddulic/)
 
 Until next time, take care and stay safe!
-
----
-
-
----

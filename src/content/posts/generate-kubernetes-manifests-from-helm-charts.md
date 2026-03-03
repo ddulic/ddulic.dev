@@ -69,29 +69,24 @@ Note that we are hardcoding the namespace above (not required, depends on your d
 Once we generate the manifests, we still need to make a few tweaks:
 
 1. (optional) Merge all RBAC related manifests into one. I like to do this as it simplifies the structure
-    
-```bash
-TMP_LOC=$PWD/tmp/cluster-autoscaler/templates && cd $TMP_LOC && cat clusterrole.yaml clusterrolebinding.yaml role.yaml rolebinding.yaml serviceaccount.yaml > rbac.yaml && cd -
-```
-    
+
+    ```bash
+    TMP_LOC=$PWD/tmp/cluster-autoscaler/templates && cd $TMP_LOC && cat clusterrole.yaml clusterrolebinding.yaml role.yaml rolebinding.yaml serviceaccount.yaml > rbac.yaml && cd -
+    ```
+
 2. Move the following into the `base` directory from `tmp/cluster-autoscaler/templates`
     - `deployment.yaml`
     - `pdb.yaml` if there are any changes
     - `service.yaml` if there are any changes
     - newly generated `rbac.yaml`
 3. There are some values that we can't replace via `values.yaml` as they are built into Helm, so we have to remove them
-    
-```bash
-sed -i '' '/app.kubernetes.io\/instance/d' base/*.yaml
-sed -i '' 's/RELEASE-NAME-cluster-autoscaler/cluster-autoscaler/g' base/*.yaml
-```
-    
+
+    ```bash
+    sed -i '' '/app.kubernetes.io\/instance/d' base/*.yaml
+    sed -i '' 's/RELEASE-NAME-cluster-autoscaler/cluster-autoscaler/g' base/*.yaml
+    ```
+
 
 Now all that is left is to create a kustomize manifest and test locally before adding it to version control.
 
 I hope this has been useful, have a wonderful day.
-
----
-
-
----

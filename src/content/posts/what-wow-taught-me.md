@@ -2,8 +2,8 @@
 title: "What WoW Taught Me"
 published: 2022-01-06
 description: ""
-tags: []
-category: Personal
+tags: [Gaming]
+category: Gaming
 draft: false
 ---
 
