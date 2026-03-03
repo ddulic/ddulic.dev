@@ -14,8 +14,3 @@ It’s a bit empty currently, hopefully, I will find the time to update and work
 Stay tuned :)
 
 ![](../../assets/images/hello-world/its_something.png)
-
----
-
-
----

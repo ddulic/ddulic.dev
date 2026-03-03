@@ -15,7 +15,7 @@ Over the years, Cloudflare has expanded its offerings, they now have a wide vari
 
 To update the permissions of the other tokens, Terraform, and in that extent the token you are using, needs to have the permissions to read the permissions groups, which you access via
 
-```json
+```hcl
 data "cloudflare_api_token_permission_groups" "all" {}
 ```
 
@@ -82,7 +82,7 @@ Again, if you want to view the permissions via the API, you will need to generat
 
 An example to give Datadog Analytics Access
 
-```bash
+```hcl
 resource "cloudflare_api_token" "analytics_token" {
   name = "staging_analytics_token"
 
@@ -131,7 +131,7 @@ Due to a catch-22 related to the Tokens and Zones, the zones have been created m
 
 I will be using a made up Zone ID of `9xwl8oagflf85yi7dls0wypsu4wwgkzk` in my examples, please change this to your [Zone ID](https://developers.cloudflare.com/fundamentals/get-started/basic-tasks/find-account-and-zone-ids/).
 
-How to import a Zone? Resources can easily be imported with https://github.com/cloudflare/cf-terraforming. For example, to import DNS Records, first [generate](https://github.com/cloudflare/cf-terraforming#example-usage)
+How to import a Zone? Resources can easily be imported with [cloudflare/cf-terraforming](https://github.com/cloudflare/cf-terraforming). For example, to import DNS Records, first [generate](https://github.com/cloudflare/cf-terraforming#example-usage)
 
 ```bash
 cf-terraforming generate \
@@ -165,7 +165,7 @@ This is a summary from https://github.com/cloudflare/terraform-provider-cloudfla
 
 There was a header order issue with the `cloudflare_ruleset`. If you have a configuration file such as the example below
 
-```json
+```hcl
 resource "cloudflare_ruleset" "remove_headers" {
   zone_id     = "zone_id"
   name        = "Transform rule for removing HTTP Headers"
@@ -201,7 +201,7 @@ resource "cloudflare_ruleset" "remove_headers" {
 
 It will always trigger a change
 
-```json
+```bash
 # cloudflare_ruleset.remove_headers will be updated in-place
   ~ resource "cloudflare_ruleset" "remove_headers" {
         id          = "ttuxrt3n2gzinq4yxssz7i6ohy7cw0ju"
@@ -265,5 +265,3 @@ Don’t get me wrong, the Terraform (and API) way makes sense, the higher the nu
 # Conclusion
 
 In conclusion, these tips and insights should help make using the Cloudflare Terraform provider easier and more effective. With these tips, you can streamline your workflow and get the most out of your Cloudflare Terraform integration. However, keep in mind that these tips are just suggestions and may not work for every use case, so always be sure to thoroughly test and explore your options.
-
----

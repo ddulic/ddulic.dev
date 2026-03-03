@@ -14,7 +14,7 @@ We live in a world of microservices that are intertwined (kind of the point), us
 What if you have hundreds of services and DNS records that need to be created and managed? What if the Load Balancer Endpoint changes? How do you keep track of hundreds of DNS records? Kubernetes allows us to utilize [external-dns](https://github.com/kubernetes-sigs/external-dns).
 
 > ExternalDNS allows you to control DNS records dynamically via Kubernetes resources in a DNS provider-agnostic way.
-> 
+>
 
 You can also use external-dns to migrate between clusters, which I will be covering in this post.
 
@@ -22,7 +22,7 @@ You can also use external-dns to migrate between clusters, which I will be cover
 
 - Kubernetes Cluster configured in AWS. I will assume both Clusters are in AWS for this example.
 - AWS Route53 zone created and configured. For this post, I will assume you are familiar with Route53 and have done this already.
-- An Ingress Controller configured in the Kubernetes Cluster. The good thing about external-dns is that it doesn't care about what this is, as long as it uses Ingress or Service k8s objects. If you use an external service, see [https://github.com/kubernetes-sigs/external-dns#deploying-to-a-cluster](https://github.com/kubernetes-sigs/external-dns#deploying-to-a-cluster) for more info.
+- An Ingress Controller configured in the Kubernetes Cluster. The good thing about external-dns is that it doesn't care about what this is, as long as it uses Ingress or Service k8s objects. If you use an external service, see [kubernetes-sigs/external-dns#deploying-to-a-cluster](https://github.com/kubernetes-sigs/external-dns#deploying-to-a-cluster) for more info.
 
 # Setup
 
@@ -89,7 +89,7 @@ I will assume that you are already using an Ingress object in your "old" cluster
 
 To use a Blue-Green release method to switch over to the new cluster, you will have to configure your CICD to change the TXT record associated with the hostname extracted from the Ingress object. The TXT Record should have a similar value to
 
-```
+```yaml
 "heritage=external-dns,external-dns/owner=old-cluster,external-dns/resource=ingress/namespace-name/ingress-name"
 ```
 
@@ -128,8 +128,9 @@ external-dns.alpha.kubernetes.io/set-identifier: <service>-<new-cluster>
 external-dns.alpha.kubernetes.io/aws-weight: "5"
 ```
 
-
----
+:::warning
+Note that if you have a record already set off a different type, you will have to DELETE the previous record “manually”. I say manually in quotes because you can hook this up with your CICD and make the experience seamless for Developers.
+:::
 
 **Tweaking the Weighted Routing**
 
@@ -144,42 +145,40 @@ Choose a number between 0 and 255, bearing in mind that you will need to apporti
 
 When comfortable, decrease the weighting in the old cluster and/or increase the weighting in the new cluster. Do this until the changes are satisfactory, and the migrated service has 100% weighting in the new cluster.
 
+:::warning
+Setting a weight of "0" would stop requests going towards the associated cluster.
+:::
 
 # Issues
 
 As always, no solution is perfect. There are some issues with Route53 and external-dns. Here are the ones I ran into:
 
 - Lack of TTL using an Alias
-    
+
     [Choosing between alias and non-alias records](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
-    
+
     > If an alias record points to an AWS resource, you can't set the time to live (TTL); Route 53 uses the default TTL for the resource. If an alias record points to another record in the same hosted zone, Route 53 uses the TTL of the record that the alias record points to.
-    > 
-    
+    >
+
     The ELBs in AWS have a TTL of 60 seconds, and you can't change this (at least not that I could find).
-    
+
     If the address is changed and the old target is unavailable, you will experience downtime.
-    
+
 - Need to delete the Route53 Record if switching record types
-    
+
     To make the issue worse, it seems that within AWS, resources will still cache the no-response if you remove the record temporarily. Unexpected as AWS states that Route53 uses the TTL of the record that the alias is pointing towards.
-    
+
 - Blocking Changes
     - If something prevents external-dns from creating a record (for example, say you are switching from a Simple to a Weighted Record), the change will be blocking...
-        
+
         [https://github.com/kubernetes-sigs/external-dns/issues/1517](https://github.com/kubernetes-sigs/external-dns/issues/1517)
-        
+
         [external-dns/types.go at 7f547d23fd70b5c4fe171048e9246638e0295151 · kubernetes-sigs/external-dns](https://github.com/kubernetes-sigs/external-dns/blob/7f547d23fd70b5c4fe171048e9246638e0295151/pkg/apis/externaldns/types.go#L404)
-        
-    - You will want to be alerted on this to be safe. There is an example of a similar message of `msg=InvalidChangeBatch` ([https://github.com/kubernetes-sigs/external-dns/issues/1517](https://github.com/kubernetes-sigs/external-dns/issues/1517)). An easy way of doing this would be to check the logs for `level=error`.
+
+    - You will want to be alerted on this to be safe. There is an example of a similar message of `msg=InvalidChangeBatch` ([kubernetes-sigs/external-dns/issues/1517](https://github.com/kubernetes-sigs/external-dns/issues/1517)). An easy way of doing this would be to check the logs for `level=error`.
 
 # Conclusion
 
 Migrating services between clusters is always complex. You want to make sure that there is no-to minimal downtime. You don't want your customers don't have a negative experience.
 
 external-dns and Route53 can fulfil such requirements if used correctly. Hopefully, this post helps you along the journey.
-
----
-
-
----

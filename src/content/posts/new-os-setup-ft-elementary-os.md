@@ -15,7 +15,7 @@ But I am no longer using Fedora 24 or Korora. And no, I haven’t updated to Fed
 
 The number of times I entered `dnf` in Ubuntu and `apt` in Fedora is
 
-[https://giphy.com/embed/nHyhqQlGbHtWE](https://giphy.com/embed/nHyhqQlGbHtWE)
+![](https://media.giphy.com/media/nHyhqQlGbHtWE/giphy.gif)
 
 I couldn't stand it any more.
 
@@ -30,7 +30,7 @@ My criteria for a good distro:
 
 After trying [Unity](https://unity.ubuntu.com/) (eck), [Gnome](https://ubuntugnome.org/), [KDE Neon](https://neon.kde.org/), all of which failed in one or more of the criteria, I landed on [Elementary](https://elementary.io/), which had it all, with a bonus – the subwoofer works out of the box!
 
-[https://giphy.com/embed/3o6EhWeei7wsp2jc1G](https://giphy.com/embed/3o6EhWeei7wsp2jc1G)
+![](https://media.giphy.com/media/3o6EhWeei7wsp2jc1G/giphy.gif)
 
 Out of the around 15 distros tested on my laptop, none has been able to enable the subwoofer to work without tinkering. It is greyed out and set to minimum, but hey, it works 🙂
 

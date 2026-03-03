@@ -22,10 +22,3 @@ Now, moving on to Arch. It uses a rolling release model, such that a regular sys
 And that marks the end of this post, since it just a suggestion of which Linux you should take a look into and hopefully use in the future. I will write a guide on how to change themes, mouse cursors (since it doesn’t always work) and some general tips and tricks for Arch.
 
 Thank you for taking the time to read and have a nice day 🙂
-
-Update, January 2017: [Now using Elementary OS](https://github.com/ddulic/damir.tech/blob/master/posts/new-os-setup-with-elementary)
-
----
-
-
----

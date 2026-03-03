@@ -7,6 +7,10 @@ category: DevOps
 draft: false
 ---
 
+:::warning
+Rant Alert
+:::
+
 There has been something that has been on my mind for the past few months, it is hard to maintain "[the flow](https://www.youtube.com/watch?v=kj1hLFSORTQ)" in DevOps.
 
 It seems to be easier for Developers (at least the friends and colleagues I talked to) as they usually work in one language, and they use fewer tools, not saying that it is easy, but it is easier to get and stay in "the zone".
@@ -50,9 +54,3 @@ Don't work on improving just the work you do, the tools and systems you have in 
 And as always, have fun. Our role gives us exposure to numerous cool tools to play around with 😄
 
 > Once you stop learning, you start dying - Albert Einstein
-> 
-
----
-
-
----

@@ -43,9 +43,9 @@ If you have never heard of Command, I would highly recommend you check it out. I
     - Prompt for the Text
     - Prompt when to add the Task for (Today, Evening, Tomorrow or Anytime (Inbox))
 
-The Shortcut uses Things URL Scheme mentioned in the Introduction. 
+The Shortcut uses Things URL Scheme mentioned in the Introduction.
 
-## **Download**
+## Download
 
 [Shortcuts](https://www.icloud.com/shortcuts/dc5b74f0b1f0448fb26044099e394b53)
 
@@ -93,11 +93,6 @@ No service/app can be perfect, but that is why it is nice when developers expand
 
 Hopefully, this post has been helpful to someone.
 
-Liked the post? Interested in more? Follow me on [LinkedIn](https://www.linkedin.com/in/ddulic/) and/or [Twitter](https://twitter.com/_ddulic).
+Liked the post? Interested in more? Follow me on [LinkedIn](https://www.linkedin.com/in/ddulic/)
 
 Have a productive day and stay safe!
-
----
-
-
----

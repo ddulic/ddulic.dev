@@ -178,8 +178,3 @@ location /syncthing/ { proxy_set_header Host $host; proxy_set_header X-Real-IP $
 And that is it. You can now configure syncthing under `example.com/syncthing` [here](https://www.youtube.com/watch?v=iFh27uPsYRw&t) is a good getting started with syncthing.
 
 Enjoy :)
-
----
-
-
----

@@ -116,6 +116,10 @@ Policy decisions are not limited to simply allow/deny answers. Like query inputs
 
 **Note that the application still has to implement the enforcement of these decisions.** If we ask OPA if `foo` can access `bar`, and the answer is no, our application should reply with a 403 Forbidden.
 
+:::note
+Want to play around with OPA and Rego? Take a look at their interactive online playground.
+:::
+
 
 # How can we use it?
 
@@ -311,7 +315,7 @@ has_field(obj, field) {
 deny[msg] {
     rule := input.resource.aws_security_group_rule[name]
     rule.type == "ingress"
-    contains(rule.cidr_blocks[_], "0.0.0.0/0") 
+    contains(rule.cidr_blocks[_], "0.0.0.0/0")
     msg = sprintf("ASG `%v` defines a fully open ingress", [name])
 }
 
@@ -339,8 +343,3 @@ This blog post was heavily inspired by several talks I attended (virtually) at K
 We have also just scratched the surface of what the Open Policy Agent is, and the tools built around it are capable of, and more are sure to come as it is rapidly growing in popularity.
 
 Thanks for taking the time to read and stay safe!
-
----
-
-
----

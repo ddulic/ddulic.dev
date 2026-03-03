@@ -59,11 +59,11 @@ A small side note; I will be using the term Host and PC interchangeably in this 
 - [Set Steam to launch minimized](https://github.com/ValveSoftware/steam-for-linux/issues/6832#issuecomment-575690226) (`/usr/bin/steam-runtime -silent -gamepadui %U`)
 - https://github.com/DavidoTek/ProtonUp-Qt⁣ – available as `protonup-qt` in AUR as you might want to switch Proton versions depending on the game
 - [Patch the card to enable NVENC and NvFBC](https://github.com/keylase/nvidia-patch) and verify with [Verify-NVENC-patch](https://github.com/keylase/nvidia-patch/wiki/Verify-NVENC-patch). This change is required on every driver update!
-    
+
     This isn’t required, as it doesn’t currently work - [Does NVFBC actually work on consumer level graphic cards on linux (Geforce)? · Issue #4811 · ValveSoftware/steam-for-linux](https://github.com/ValveSoftware/steam-for-linux/issues/4811), I haven’t checked it myself, but for some reason I keep enabling it after every driver update in the hopes that Valve decides to magically patch it. Below is an explanation of the different video encoding technologies that Steam can utilize
-    
+
     [Explanation: NvFBC, NvIFR, NvENC :: Steam Remote Play](https://steamcommunity.com/groups/homestream/discussions/0/451850849186356998/#c451850849191050105)
-    
+
 - In Steam “Advanced Host Options” preferences, under Remote Play:
     - Disable “Play audio on host”, feel free to keep it on if you are a monster
     - “Enable hardware encoding”
@@ -237,25 +237,25 @@ If you are like me, your Linux PC isn’t just for Streaming Games, you might wa
 There are a couple of prerequisites that we need to configure
 
 1. Enable and start `sshd`
-    
-```bash
-sudo systemctl enable --now sshd
-```
-    
+
+    ```bash
+    sudo systemctl enable --now sshd
+    ```
+
     Modify the [sshd_config](https://www.man7.org/linux/man-pages/man5/sshd_config.5.html) to
-    
+
     - Remove password auth
     - Change the default port
 2. Update the [sudoers](https://man.archlinux.org/man/sudoers.5) (`sudo visudo`) file to allow anyone in the wheel group to run sudo commands with no password.
-    
-```bash
-%wheel ALL=(ALL:ALL) NOPASSWD: ALL
-```
-    
+
+    ```bash
+    %wheel ALL=(ALL:ALL) NOPASSWD: ALL
+    ```
+
 3. Configure your host to have a Static IP
-    
+
     This should ideally be done in the Router, but it can also be configured in the Network Manager.
-    
+
 
 ---
 
@@ -279,12 +279,12 @@ It uses [zenity](https://help.gnome.org/users/zenity/stable/) and other tools th
 1. Boot into Steam Deck Desktop Mode (look up a guide on how to use Desktop Mode)
 2. Open the Terminal Application
 3. Download the file from GitHub and set it as an executable
-    
-```bash
-wget https://raw.githubusercontent.com/ddulic/steam-remote-play-linux/main/manage_pc.sh
-chmod +x manage_pc.sh
-```
-    
+
+    ```bash
+    wget https://raw.githubusercontent.com/ddulic/steam-remote-play-linux/main/manage_pc.sh
+    chmod +x manage_pc.sh
+    ```
+
 4. Add non-Steam Game
     1. There are plenty of guides online on how to do this
     2. Add the script required variables before the launch options
@@ -315,34 +315,33 @@ Here's a brief summary of what the script does:
 So, to set this up:
 
 1. Clone the repository to `$HOME/opt`
-    
-```bash
-git clone git@github.com:ddulic/steam-remote-play-linux.git $HOME/opt/steam-remote-play-linux
-```
-    
-2. `cd` into the root of the repo, symlink the systemd service to `/etc/systemd/system`
-    
-    
-```bash
-systemctl link --user ${PWD}/auto-suspend.service
-```
-    
-3. Enable, start and check the systemd service
-    
-```bash
 
-systemctl --user status auto-suspend
-systemctl --user enable --now auto-suspend
-```
-    
+    ```bash
+    git clone git@github.com:ddulic/steam-remote-play-linux.git $HOME/opt/steam-remote-play-linux
+    ```
+
+2. `cd` into the root of the repo, symlink the systemd service to `/etc/systemd/system`
+
+
+    ```bash
+    systemctl link --user ${PWD}/auto-suspend.service
+    ```
+
+3. Enable, start and check the systemd service
+
+    ```bash
+    systemctl --user status auto-suspend
+    systemctl --user enable --now auto-suspend
+    ```
+
 4. `daemon-reload` if you make/pull changes
-    
-```bash
-systemctl --user daemon-reload
-systemctl --user restart auto-suspend
-systemctl --user status auto-suspend
-```
-    
+
+    ```bash
+    systemctl --user daemon-reload
+    systemctl --user restart auto-suspend
+    systemctl --user status auto-suspend
+    ```
+
 
 ## Siri Shortcut
 
@@ -375,5 +374,3 @@ I would recommend looking at the guides by [u/keveridge](https://www.reddit.com/
 In conclusion, streaming games from a PC has become a viable solution for those of us who cannot game at our desks. With low latency game streaming and the ability to play on larger screens, such as TVs, the experience has become much more enjoyable. While there are some issues that need to be addressed, especially when it comes to gaming on Linux, the benefits outweigh the challenges. As a passionate gamer, I am excited to see how game streaming technology will continue to develop and improve in the future.
 
 Thank you for taking the time to read, hopefully it will provide some benefit.
-
----

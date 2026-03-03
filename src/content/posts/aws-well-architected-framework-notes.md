@@ -151,8 +151,3 @@ PS the best way to copy and paste notes from Kindle is to attach a Goodreads acc
 - Amazon SQS provides a queue that allows a single consumer to read individual messages. Amazon Kinesis provides a stream that allows many consumers to read the same messages.
 - When architecting with a buffer-based approach keep in mind two key considerations. First, what is the acceptable delay between producing the work and consuming the work? Second, how do you plan to handle duplicate requests for work?
 - Idempotence is an application logic pattern that allows a consumer to process a message multiple times, but when a message is subsequently processed it has no effect on downstream systems or storage.
-
----
-
-
----

@@ -90,7 +90,7 @@ terraform import aws_cloudfront_function.AppFunction app-function
 terraform import aws_cloudfront_function.FunctionTwo function-two
 ```
 
-The `terraformer import` also generates a valid state file, but it is scattered all over the place, so I used https://github.com/jordiprats/tfstate-merge to merge them all into one. I used the S3 state as the starting point and merged the rest into it
+The `terraformer import` also generates a valid state file, but it is scattered all over the place, so I used [jordiprats/tfstate-merge](https://github.com/jordiprats/tfstate-merge) to merge them all into one. I used the S3 state as the starting point and merged the rest into it
 
 ```bash
 python ~/Documents/tfstate-merge/mergestates.py generated/aws/acm generated/aws/route53 generated/aws/cloudfront .
@@ -117,5 +117,3 @@ I skipped `AccessControl: "BucketOwnerFullControl"` as AWS [ignores it by defaul
 The next order of business is to get this packaged up into a module. This will depend on how you want to structure the module and what would work for your project, but it will involve running a lot of `terraform state mv` to make everything work.
 
 Hopefully, this helps someone. Have a wonderful day.
-
----
