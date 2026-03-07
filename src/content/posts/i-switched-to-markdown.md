@@ -2,7 +2,7 @@
 title: "I switched to Markdown"
 published: 2017-08-06
 description: ""
-tags: []
+tags: [Markdown, Blogging, Writing, Self-Hosting]
 category: Blogging
 draft: false
 ---

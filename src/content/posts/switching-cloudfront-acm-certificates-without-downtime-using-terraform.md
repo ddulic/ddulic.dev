@@ -2,7 +2,7 @@
 title: "Switching CloudFront ACM Certificates Without  Downtime Using Terraform"
 published: 2023-05-19
 description: ""
-tags: [Terraform, CloudFront]
+tags: [Terraform, CloudFront, AWS, ACM, SSL]
 category: Terraform
 draft: false
 ---

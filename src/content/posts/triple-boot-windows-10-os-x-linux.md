@@ -2,7 +2,7 @@
 title: "Triple Boot - Windows 10 / OS X / Linux"
 published: 2016-07-16
 description: ""
-tags: [Linux]
+tags: [Linux, Triple Boot, macOS, Windows, Hackintosh]
 category: Linux
 draft: false
 ---

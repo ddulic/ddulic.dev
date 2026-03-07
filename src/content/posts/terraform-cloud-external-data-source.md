@@ -2,7 +2,7 @@
 title: "Terraform Cloud External Data Source"
 published: 2022-10-17
 description: ""
-tags: [Terraform]
+tags: [Terraform, AWS, CloudFront, Python, Terraform Cloud]
 category: Terraform
 draft: false
 ---
