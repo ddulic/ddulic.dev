@@ -3,7 +3,7 @@ title: "GitHub Codespaces on iPad"
 published: 2020-11-17
 description: ""
 tags: []
-category: Personal
+category: Development
 draft: false
 ---
 

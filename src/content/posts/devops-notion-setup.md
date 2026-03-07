@@ -3,7 +3,7 @@ title: "DevOps Notion Setup"
 published: 2020-07-25
 description: ""
 tags: [DevOps, Notion, Productivity]
-category: DevOps
+category: Productivity
 draft: false
 ---
 

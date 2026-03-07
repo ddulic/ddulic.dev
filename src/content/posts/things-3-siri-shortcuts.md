@@ -3,7 +3,7 @@ title: "Things 3 Siri Shortcuts"
 published: 2021-03-09
 description: ""
 tags: [Productivity, Automation]
-category: DevOps
+category: Productivity
 draft: false
 ---
 

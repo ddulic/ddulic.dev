@@ -3,7 +3,7 @@ title: "On the Importance of Regular Reviews"
 published: 2023-06-23
 description: ""
 tags: [Productivity]
-category: Reading
+category: Productivity
 draft: false
 ---
 
