@@ -25,8 +25,11 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content, headings, remarkPluginFrontmatter } = await entry.render();
 
-const description = entry.data.description || remarkPluginFrontmatter.excerpt || entry.data.title;
-const ogImage = entry.data.image?.startsWith('/') ? entry.data.image : undefined;
+const description =
+	entry.data.description || remarkPluginFrontmatter.excerpt || entry.data.title;
+const ogImage = entry.data.image?.startsWith("/")
+	? entry.data.image
+	: undefined;
 
 const jsonLd = {
 	"@context": "https://schema.org",
