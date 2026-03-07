@@ -48,7 +48,9 @@ jobs:
                   "Bash(git commit:*)",
                   "Bash(git push:*)",
                   "Bash(git diff:*)",
-                  "Bash(git log:*)"
+                  "Bash(git log:*)",
+                  "Bash(git mv:*)",
+                  "Bash(ls:*)"
                 ],
                 "deny": []
               }
@@ -56,7 +58,7 @@ jobs:
           prompt: |
             A new blog post was added in this PR. The changed file(s): ${{ steps.changed-posts.outputs.files }}
 
-            Your task is to ensure every post's tags, category, and description are accurate and consistent across the entire blog.
+            Your task is to ensure every post's tags, category, description are accurate and consistent, and that all images have SEO-friendly filenames.
 
             Description rules:
             - The `description:` field must be a single sentence summarising the post content
@@ -77,6 +79,13 @@ jobs:
             - The category should be a single concise noun or proper noun (e.g. Terraform, Kubernetes, Productivity, Linux, Gaming, Blogging, Career, CI/CD, AWS)
             - NEVER use generic categories such as: Personal, General, Misc, Other, Various
 
+            Image SEO rules:
+            - A non-SEO-friendly filename is any of: random hash (e.g. hG4xpm85JuI6ZdjFi.png), UUID (e.g. DD591F5C-9F96-48C7-A580-E832B4465153.png), screenshot timestamp (e.g. Screenshot_2021-04-26_at_16.48.17.png), generic name (e.g. Untitled.png, Untitled 1.png), or camera roll name (e.g. IMG_0945.png)
+            - SEO-friendly names must be lowercase, hyphen-separated, descriptive of the image content, and keep the original file extension (e.g. kubernetes-node-architecture.png)
+            - Derive the new name from the surrounding text/context in the markdown (headings, captions, paragraph content near the image reference)
+            - If multiple images exist in the same folder, ensure each gets a unique name
+            - Do NOT rename images that already have SEO-friendly names
+
             Steps:
             1. Read ALL files in src/content/posts/ to understand the full tag landscape and existing descriptions
             2. Build a frequency map of every tag across all posts
@@ -88,6 +97,10 @@ jobs:
             8. Update the `tags:` line of the changed post(s) with the valid tags (up to 5)
             9. Update the `category:` line of the changed post(s) with the most significant topic
             10. If any existing tags on other posts now only appear on a single post due to this change, remove them from those posts too to maintain consistency
-            11. Stage all modified files with `git add`
-            12. Commit with message "auto-enrich: update tags, category, and description for [filename]"
-            13. Push to the current branch with `git push`
+            11. For each changed post, list all local image references (paths starting with ../../assets/images/)
+            12. For each image with a non-SEO-friendly filename, derive a descriptive SEO-friendly name from surrounding context
+            13. Rename the image file using `git mv <old-path> <new-path>`
+            14. Update every occurrence of the old image path in the markdown file with the new path
+            15. Stage all modified files with `git add`
+            16. Commit with message "auto-enrich: update tags, category, description, and image names for [filename]"
+            17. Push to the current branch with `git push`
