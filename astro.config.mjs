@@ -117,7 +117,7 @@ export default defineConfig({
 			rehypeKatex,
 			rehypeSlug,
 			[targetBlank, { domain: "ddulic.dev" }],
-			rehypeOptimizeImages(),
+			rehypeOptimizeImages,
 			[
 				rehypeComponents,
 				{
