@@ -1,7 +1,7 @@
 name: Auto Tag and Categorize Blog Posts
 
 on:
-  push:
+  pull_request:
     branches: [main]
     paths:
       - 'src/content/posts/**.md'
@@ -15,14 +15,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
       - name: Get changed blog posts
         id: changed-posts
         run: |
-          changed=$(git diff --name-only HEAD~1 HEAD -- 'src/content/posts/*.md' | tr '\n' ' ')
+          changed=$(git diff --name-only origin/main...HEAD -- 'src/content/posts/*.md' | tr '\n' ' ')
           echo "files=$changed" >> $GITHUB_OUTPUT
           echo "Changed posts: $changed"
 
@@ -32,7 +32,7 @@ jobs:
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
-            A blog post was just pushed. The changed file(s): ${{ steps.changed-posts.outputs.files }}
+            A new blog post was added in this PR. The changed file(s): ${{ steps.changed-posts.outputs.files }}
 
             Your task is to ensure every post's tags and category are accurate and consistent across the entire blog.
 
