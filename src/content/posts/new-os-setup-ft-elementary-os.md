@@ -1,7 +1,7 @@
 ---
 title: "New OS Setup ft. Elementary OS"
 published: 2017-01-08
-description: ""
+description: "After ditching Hackintosh, a search for a stable Ubuntu-based distro led to Elementary OS — pretty, stable, and with working subwoofer support."
 tags: [Linux]
 category: Linux
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "Terraform Cloud External Data Source"
 published: 2022-10-17
-description: ""
+description: "The journey of enabling CloudFront Additional Metrics across all distributions using Terraform Cloud's External Data Source and a Python boto3 script."
 tags: [Terraform, AWS, CloudFront]
 category: Terraform
 draft: false

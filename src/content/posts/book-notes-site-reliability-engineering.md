@@ -1,7 +1,7 @@
 ---
 title: "Book Notes: Site Reliability Engineering"
 published: 2022-07-12
-description: ""
+description: "Key notes and favourite quotes from the Google SRE book, covering monitoring, reliability, postmortems, on-call balance, and resilient systems."
 tags: [Book Notes, Reliability, DevOps]
 category: SRE
 draft: false
