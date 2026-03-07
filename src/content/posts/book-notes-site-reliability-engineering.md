@@ -3,7 +3,7 @@ title: "Book Notes: Site Reliability Engineering"
 published: 2022-07-12
 description: ""
 tags: [Book Notes, SRE, Reliability, DevOps, Monitoring]
-category: Reading
+category: SRE
 draft: false
 ---
 
