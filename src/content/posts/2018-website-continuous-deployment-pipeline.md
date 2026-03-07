@@ -1,7 +1,7 @@
 ---
 title: "2018 Website Continuous Deployment Pipeline"
 published: 2018-02-17
-description: ""
+description: "How to build an automated CI/CD pipeline for a static website using Hexo, Travis CI, AWS S3, and CloudFront for cheap and reliable hosting."
 tags: [CI/CD, AWS, CloudFront]
 category: CI/CD
 draft: false

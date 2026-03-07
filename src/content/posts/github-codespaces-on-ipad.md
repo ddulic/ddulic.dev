@@ -1,7 +1,7 @@
 ---
 title: "GitHub Codespaces on iPad"
 published: 2020-11-17
-description: ""
+description: "An investigation into using GitHub Codespaces on an iPad Pro for light development with a full VSCode cloud environment running in the browser."
 tags: []
 category: Development
 draft: false

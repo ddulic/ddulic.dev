@@ -1,7 +1,7 @@
 ---
 title: "Deep Work and DevOps"
 published: 2021-06-08
-description: ""
+description: "A rant on the challenge of maintaining deep focus in DevOps amid constant context switching, with practical tips to improve flow and productivity."
 tags: [DevOps, Productivity]
 category: Productivity
 draft: false

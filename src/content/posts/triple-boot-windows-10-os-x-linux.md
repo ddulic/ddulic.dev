@@ -1,7 +1,7 @@
 ---
 title: "Triple Boot - Windows 10 / OS X / Linux"
 published: 2016-07-16
-description: ""
+description: "A guide to triple booting Windows 10, OS X via Hackintosh with Clover, and Linux (Fedora) on a Lenovo y50-70 laptop."
 tags: [Linux, macOS, Hackintosh]
 category: Linux
 draft: false

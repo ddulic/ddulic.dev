@@ -1,7 +1,7 @@
 ---
 title: "Plex Anime Setup"
 published: 2017-06-20
-description: ""
+description: "A guide to setting up Plex for anime on Linux using the Absolute Series Scanner and Hama agent for proper AniDB metadata matching and file organization."
 tags: [Linux]
 category: Media
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "I switched to Markdown"
 published: 2017-08-06
-description: ""
+description: "Why Markdown became the go-to format for all writing, paired with Jupyter notebooks and Syncthing for editing and cross-device file synchronization."
 tags: [Blogging]
 category: Blogging
 draft: false

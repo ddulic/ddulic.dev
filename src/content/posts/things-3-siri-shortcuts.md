@@ -1,7 +1,7 @@
 ---
 title: "Things 3 Siri Shortcuts"
 published: 2021-03-09
-description: ""
+description: "Two custom Siri Shortcuts for Things 3 to add tasks via the Share Sheet and create templated to-dos and projects using the Things URL Scheme."
 tags: [Productivity, Automation]
 category: Productivity
 draft: false

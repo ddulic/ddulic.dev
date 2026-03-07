@@ -1,7 +1,7 @@
 ---
 title: "Lenovo y50-70 Linux?"
 published: 2015-11-30
-description: ""
+description: "A recommendation for Antergos (Arch Linux) as the best Linux distro for the Lenovo y50-70, with notes on drivers, Wi-Fi support, and the AUR."
 tags: [Linux, Hardware, Lenovo]
 category: Linux
 draft: false
