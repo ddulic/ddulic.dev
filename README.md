@@ -17,7 +17,6 @@ All commands are run from the root of the project:
 | `pnpm check`               | Run Astro checks for errors                   |
 | `pnpm format`              | Format source code using Biome                |
 | `pnpm lint`                | Lint and auto-fix source code using Biome     |
-| `pnpm new-post <filename>` | Scaffold a new post in `src/content/posts/`   |
 
 ## New Post Frontmatter
 
