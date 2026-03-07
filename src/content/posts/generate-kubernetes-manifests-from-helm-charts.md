@@ -2,7 +2,7 @@
 title: "Generate Kubernetes Manifests from Helm Charts"
 published: 2022-05-18
 description: ""
-tags: [Kubernetes, Helm, Kustomize, DevOps]
+tags: [Kubernetes, DevOps]
 category: Kubernetes
 draft: false
 ---

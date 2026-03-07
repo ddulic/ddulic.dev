@@ -51,7 +51,6 @@ Template blog statis yang dibangun dengan [Astro](https://astro.build).
 2. Untuk mengedit blog secara lokal, klon repositori kamu, jalankan `pnpm install` untuk instalasi dependensi.
     - Install [pnpm](https://pnpm.io) `npm install -g pnpm` jika belum punya.
 3. Edit file konfigurasi `src/config.ts` untuk menyesuaikan blog.
-4. Jalankan `pnpm new-post <nama-file>` untuk membuat postingan baru dan edit di `src/content/posts/`.
 5. Deploy blog ke Vercel, Netlify, GitHub Pages, dll. sesuai [panduan](https://docs.astro.build/en/guides/deploy/). Jangan lupa edit konfigurasi situs di `astro.config.mjs` sebelum deploy.
 
 ## 📝 Frontmatter Postingan
@@ -89,7 +88,6 @@ Semua perintah dijalankan dari root proyek, via terminal:
 | `pnpm preview`               | Pratinjau hasil build sebelum deploy                      |
 | `pnpm check`                 | Cek error atau masalah di kode                            |
 | `pnpm format`                | Format kode dengan Biome                                  |
-| `pnpm new-post <nama-file>`  | Membuat postingan baru                                    |
 | `pnpm astro ...`             | Jalankan perintah CLI seperti `astro add`, `astro check`  |
 | `pnpm astro --help`          | Bantuan menggunakan Astro CLI                             |
 

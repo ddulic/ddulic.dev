@@ -26,26 +26,31 @@ jobs:
           echo "files=$changed" >> $GITHUB_OUTPUT
           echo "Changed posts: $changed"
 
-      - name: Auto-tag and categorize new blog posts
+      - name: Auto-tag blog posts
         if: steps.changed-posts.outputs.files != ''
         uses: anthropics/claude-code-action@main
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           prompt: |
-            The following blog post files were just pushed: ${{ steps.changed-posts.outputs.files }}
+            A blog post was just pushed. The changed file(s): ${{ steps.changed-posts.outputs.files }}
 
-            For each file:
-            1. Read the file content
-            2. Analyse the post topic and content
+            Your task is to ensure every post's tags and category are accurate and consistent across the entire blog.
 
-            Tags:
-            3. If the tags field is empty (`tags: []`) or has fewer than 3 tags, update it with up to 5 relevant tags that best describe the content
-            4. If the post already has 3 or more tags, leave the tags unchanged
-            5. Tags should be concise, title-cased, and directly relevant to the post content (e.g. Terraform, Kubernetes, DevOps, Linux, Productivity)
+            Tag rules:
+            - A tag may only appear on a post if that same tag also appears on at least one OTHER post in src/content/posts/
+            - Tags must be shared across 2 or more posts to be valid
+            - Each post may have a maximum of 5 tags
+            - Tags should be concise and title-cased (e.g. Terraform, Kubernetes, DevOps, Linux, Productivity)
 
-            Category:
-            6. Set the `category:` field to the single most significant topic of the post
-            7. The category should be a single concise noun or proper noun (e.g. Terraform, Kubernetes, Productivity, Linux, Gaming, Blogging, Career, CI/CD, AWS, SRE, Management)
-            8. Always update the category — pick the one that best represents the primary subject matter
+            Category rules:
+            - Set the `category:` field to the single most significant topic of the post
+            - The category should be a single concise noun or proper noun (e.g. Terraform, Kubernetes, Productivity, Linux, Gaming, Blogging, Career, CI/CD, AWS)
 
-            Update the file in place — only modify the `tags:` and `category:` lines in the frontmatter. Do not change anything else.
+            Steps:
+            1. Read ALL files in src/content/posts/ to understand the full tag landscape
+            2. Build a frequency map of every tag across all posts
+            3. For the changed post(s), identify candidate tags from the post content
+            4. Only assign a candidate tag if it already exists on at least one other post (frequency >= 2 after adding it)
+            5. Update the `tags:` line of the changed post(s) with the valid tags (up to 5)
+            6. Update the `category:` line of the changed post(s) with the most significant topic
+            7. If any existing tags on other posts now only appear on a single post due to this change, remove them from those posts too to maintain consistency
