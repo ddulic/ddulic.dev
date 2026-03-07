@@ -2,7 +2,7 @@
 title: "DevOps Notion Setup"
 published: 2020-07-25
 description: ""
-tags: [DevOps, Notion]
+tags: [DevOps, Notion, Productivity, Workflow, Documentation]
 category: DevOps
 draft: false
 ---

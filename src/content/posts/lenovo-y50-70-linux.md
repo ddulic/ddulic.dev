@@ -2,7 +2,7 @@
 title: "Lenovo y50-70 Linux?"
 published: 2015-11-30
 description: ""
-tags: [Linux]
+tags: [Linux, Arch Linux, Hardware, Lenovo, Setup]
 category: Linux
 draft: false
 ---

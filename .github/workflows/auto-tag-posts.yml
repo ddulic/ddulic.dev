@@ -1,0 +1,45 @@
+name: Auto Tag Blog Posts
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/content/posts/**.md'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Get changed blog posts
+        id: changed-posts
+        run: |
+          changed=$(git diff --name-only HEAD~1 HEAD -- 'src/content/posts/*.md' | tr '\n' ' ')
+          echo "files=$changed" >> $GITHUB_OUTPUT
+          echo "Changed posts: $changed"
+
+      - name: Auto-tag new blog posts
+        if: steps.changed-posts.outputs.files != ''
+        uses: anthropics/claude-code-action@main
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            The following blog post files were just pushed: ${{ steps.changed-posts.outputs.files }}
+
+            For each file:
+            1. Read the file content
+            2. Analyse the post topic and content
+            3. If the tags field is empty (`tags: []`) or has fewer than 3 tags, update it with up to 5 relevant tags that best describe the content
+            4. If the post already has 3 or more tags, leave it unchanged
+            5. Tags should be concise, title-cased, and directly relevant to the post content (e.g. Terraform, Kubernetes, DevOps, Linux, Productivity)
+            6. Update the file in place — only modify the `tags:` line in the frontmatter
+
+            Do not change anything else in the files.
