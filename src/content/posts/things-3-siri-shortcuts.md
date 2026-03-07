@@ -2,7 +2,7 @@
 title: "Things 3 Siri Shortcuts"
 published: 2021-03-09
 description: ""
-tags: [Productivity, iOS, Automation, Siri Shortcuts, Task Management]
+tags: [Productivity, Automation]
 category: DevOps
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "Migrate CloudFormation to Terraform"
 published: 2023-03-28
 description: ""
-tags: [Terraform, CloudFormation, AWS, Migration, IaC]
+tags: [Terraform, AWS, Migration, IaC]
 category: Terraform
 draft: false
 ---

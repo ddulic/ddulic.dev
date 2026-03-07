@@ -2,7 +2,7 @@
 title: "Migrate Hexo to Hugo"
 published: 2020-10-13
 description: ""
-tags: [Hugo, Blogging, Static Site, GitHub Actions, Migration]
+tags: [Blogging, Migration]
 category: Blogging
 draft: false
 ---
