@@ -53,7 +53,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.svg",
+	avatar: "assets/images/avatar.png",
 	name: "Damir Dulic",
 	bio: "Systems engineer & team lead who blends an active lifestyle with a love for nature, building automation that lets developers ship faster.\n\nWhen I’m off the trail I’m gaming, watching anime, and exploring tech that matters.",
 	links: [
