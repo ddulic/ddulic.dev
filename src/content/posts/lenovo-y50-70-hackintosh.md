@@ -3,7 +3,7 @@ title: "Lenovo y50-70 Hackintosh"
 published: 2015-11-26
 description: ""
 tags: [Hackintosh, macOS, Lenovo, Hardware]
-category: Personal
+category: Hackintosh
 draft: false
 ---
 

@@ -1,4 +1,4 @@
-name: Auto Tag Blog Posts
+name: Auto Tag and Categorize Blog Posts
 
 on:
   push:

@@ -3,7 +3,7 @@ title: "Questions in Interviews"
 published: 2020-05-25
 description: ""
 tags: [Career]
-category: DevOps
+category: Career
 draft: false
 ---
 

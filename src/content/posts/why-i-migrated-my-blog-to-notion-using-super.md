@@ -3,7 +3,7 @@ title: "Why I migrated my Blog to Notion (using Super)"
 published: 2021-01-31
 description: ""
 tags: [Notion, Blogging, Productivity]
-category: Productivity
+category: Blogging
 draft: false
 ---
 

@@ -3,7 +3,7 @@ title: "Book Notes: The Manager's Path"
 published: 2021-03-21
 description: ""
 tags: [Book Notes, Career]
-category: Reading
+category: Management
 draft: false
 ---
 
