@@ -1,7 +1,7 @@
 ---
 title: "Test Auto Tag Workflow"
 published: 2026-03-07
-description: "A test post to verify the PR auto tag workflow is working correctly."
+description: "A test post to verify the PR auto-tag workflow is working correctly."
 tags: []
 category: DevOps
 draft: true
