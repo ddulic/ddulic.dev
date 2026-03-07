@@ -56,7 +56,7 @@ It took me a while to realize that by the looks of it ([mentioned nowhere in the
 
 **“Read all resources” does not grant you this permission!**
 
-![Screenshot 2023-03-02 at 11.16.17.png](../../assets/images/cloudflare-terraform-provider-tips/Screenshot_2023-03-02_at_11.16.17.png)
+![](../../assets/images/cloudflare-terraform-provider-tips/cloudflare-api-token-user-permissions.png)
 
 Once I used the above temporary token to get the ID of the bootstrap token, I could import it.
 

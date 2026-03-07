@@ -141,7 +141,7 @@ OPA can be leveraged in use cases beyond access control, [Gatekeeper](https://gi
 - Prevent Ingress conflicts
 - You get the picture 🖼️
 
-![](../../assets/images/open-policy-agent-in-devops/hG4xpm85JuI6ZdjFi.png)
+![](../../assets/images/open-policy-agent-in-devops/opa-gatekeeper-admission-controller.png)
 
 Gatekeeper deploys OPA as an Admission Controller for Kubernetes. [Admission Controllers](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers) are plug-ins that intercept requests to the master API prior to persistence of a resource, but after the request is authenticated and authorized.
 

@@ -44,17 +44,17 @@ There are 2 main sections:
 
 This is where you will be 90% of the time.
 
-![](../../assets/images/devops-notion-setup/JxxlPRmeHVXDV8YQh.png)
+![](../../assets/images/devops-notion-setup/notion-notes-database-view.png)
 
 Apologies for the truncation, you understand.
 
 - Properties
 
-    ![](../../assets/images/devops-notion-setup/nFt4i2aWW8PmEf4FO.png)
+    ![](../../assets/images/devops-notion-setup/notion-notes-properties.png)
 
 - Templates
 
-    ![](../../assets/images/devops-notion-setup/bs2kg5bgoiy1eMRkM.png)
+    ![](../../assets/images/devops-notion-setup/notion-notes-templates.png)
 
 
 Ticket Template
@@ -110,17 +110,17 @@ I typically keep this section cloned and synced to the ticket's description in J
 
 The remaining 10%.
 
-![](../../assets/images/devops-notion-setup/hL8avbPzxr0h98Qjo.png)
+![](../../assets/images/devops-notion-setup/notion-log-database-view.png)
 
 Again, apologies for the truncation, you understand.
 
 Properties. `Property` points to a Note property (as can be seen in the above image).
 
-![](../../assets/images/devops-notion-setup/5ArtIsGLHOSZyY3dj.png)
+![](../../assets/images/devops-notion-setup/notion-log-properties.png)
 
 Templates. `$NUM` is replaced by the week number (tracked since I started working at the company).
 
-![](../../assets/images/devops-notion-setup/uwBvfPXHch99uvmLQ.png)
+![](../../assets/images/devops-notion-setup/notion-log-week-template.png)
 
 Week Template
 

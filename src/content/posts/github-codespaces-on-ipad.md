@@ -13,7 +13,7 @@ In this post, I will investigate if it is possible to use the iPad Pro for "codi
 
 I have an iPad Pro 2020 12.9" and it is a wonderful tool, the fluent 120hz display makes reading, watching videos (although most are locked at 30), and even navigating the UI pure joy. The only thing I was missing was being able to code and publish [my website](https://devblogs.microsoft.com/visualstudio/introducing-visual-studio-codespaces/) with it.
 
-![](../../assets/images/github-codespaces-on-ipad/x6GXT60ButydQ9kiN.png)
+![](../../assets/images/github-codespaces-on-ipad/ipad-pro-github-codespaces-intro.png)
 
 As of writing this, [GitHub Codespaces](https://github.com/features/codespaces) is in Early Access and I was lucky enough to have been given access.
 
@@ -23,7 +23,7 @@ I also use the Magic Keyboard, but you can use any keyboard and mouse.
 
 # Before Codespaces
 
-![](../../assets/images/github-codespaces-on-ipad/DD591F5C-9F96-48C7-A580-E832B4465153.png)
+![](../../assets/images/github-codespaces-on-ipad/ipad-coding-before-codespaces.png)
 
 You might have noticed the quotes around coding in the first sentence, this is because I don't code that much outside of work, I mostly have this blog which I occasionally play with. The only requirement for a coding environment for me is `git` and some way to edit files in a repository.
 
@@ -41,7 +41,7 @@ I don't know why Apple doesn't fix coding on the iPad, but maybe they didn't eve
 
 # After Codespaces
 
-![](../../assets/images/github-codespaces-on-ipad/F061F2CE-8730-4265-A420-21B0A1DA5019.jpeg)
+![](../../assets/images/github-codespaces-on-ipad/github-codespaces-vscode-browser.jpeg)
 
 Browsers are becoming the new OS, you can do a lot in a browser, if you can play [AAA games](https://en.wikipedia.org/wiki/AAA_%28video_game_industry%29) why wouldn't you be able to code?
 
@@ -57,7 +57,7 @@ So, let’s try and configure it. Luckily, I use the popular [Settings Sync](htt
 
 FFS...
 
-![](../../assets/images/github-codespaces-on-ipad/D5EC3FF8-6EC7-483B-8EE1-667302A61BE1.jpeg)
+![](../../assets/images/github-codespaces-on-ipad/codespaces-settings-sync-error.jpeg)
 
 Poking around in the settings shows that it has some sort of sync, however, seems to be a preview feature - [https://code.visualstudio.com/docs/editor/settings-sync](https://code.visualstudio.com/docs/editor/settings-sync)
 

@@ -24,7 +24,7 @@ I am using [super.so](https://super.so?via=ddulic) to host my website statically
 As the above quote states, it just adds the missing layers on top of Notion that would allow you to properly host a website.
 
 
-![](../../assets/images/why-i-migrated-my-blog-to-notion-using-super/86E4AB63-F866-4E53-BF99-CAA40D8724E6.png)
+![](../../assets/images/why-i-migrated-my-blog-to-notion-using-super/notion-super-blog-website.png)
 
 There are a couple of reasons why I decided to do this.
 
