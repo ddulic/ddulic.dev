@@ -2,7 +2,7 @@
 title: "Questions in Interviews"
 published: 2020-05-25
 description: ""
-tags: [Career, Interviews, Hiring]
+tags: [Career]
 category: Career
 draft: false
 ---

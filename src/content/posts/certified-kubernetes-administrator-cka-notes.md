@@ -2,7 +2,7 @@
 title: "Certified Kubernetes Administrator (CKA) Notes"
 published: 2021-08-24
 description: ""
-tags: [Kubernetes, CKA, Certification, CNCF, DevOps]
+tags: [Kubernetes, DevOps]
 category: Kubernetes
 draft: false
 ---

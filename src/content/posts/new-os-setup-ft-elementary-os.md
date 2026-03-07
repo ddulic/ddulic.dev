@@ -2,7 +2,7 @@
 title: "New OS Setup ft. Elementary OS"
 published: 2017-01-08
 description: ""
-tags: [Linux, Elementary OS, Setup]
+tags: [Linux, Setup]
 category: Linux
 draft: false
 ---
