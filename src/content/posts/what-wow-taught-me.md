@@ -2,7 +2,7 @@
 title: "What WoW Taught Me"
 published: 2022-01-06
 description: ""
-tags: [Gaming, Personal, Productivity]
+tags: [Gaming, Productivity]
 category: Gaming
 draft: false
 ---

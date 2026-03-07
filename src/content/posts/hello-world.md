@@ -2,8 +2,8 @@
 title: "Hello World!"
 published: 2015-10-12
 description: ""
-tags: [Personal, Blogging]
-category: Personal
+tags: [Blogging]
+category: Blogging
 draft: false
 ---
 
