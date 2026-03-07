@@ -2,7 +2,7 @@
 title: "Using external-dns to Migrate Services between Kubernetes Clusters"
 published: 2022-03-20
 description: ""
-tags: [Kubernetes, AWS, Route53, DNS, Migration]
+tags: [Kubernetes, AWS, DNS, Migration]
 category: Kubernetes
 draft: false
 ---

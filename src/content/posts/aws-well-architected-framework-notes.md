@@ -2,7 +2,7 @@
 title: "AWS Well-Architected Framework Notes"
 published: 2018-10-28
 description: ""
-tags: [AWS, Architecture, Security, Reliability, Cloud]
+tags: [AWS, Security, Reliability]
 category: AWS
 draft: false
 ---
