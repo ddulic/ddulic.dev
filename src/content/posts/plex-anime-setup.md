@@ -7,9 +7,6 @@ category: Media
 draft: false
 ---
 
----
-
-
 This guide will require a few things:
 
 1. Plex - Just download plex and install it with your preferred package manager.

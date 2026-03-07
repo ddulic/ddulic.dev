@@ -7,12 +7,7 @@ category: AWS
 draft: false
 ---
 
----
-
-
 # **Introduction**
-
-Hey 👋
 
 This is a collection of all of my notes/quotes from the 5 [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/) books/whitepapers, which cover
 

@@ -7,9 +7,6 @@ category: CI/CD
 draft: false
 ---
 
----
-
-
 New year, new website... again. But this one may be here to stay.
 
 Solving a series of problems starting from an idea to a fully working system is why I love my work. It makes me happy.
