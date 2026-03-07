@@ -3,7 +3,7 @@ title: "2018 Resume Continuous Deployment Pipeline"
 published: 2018-03-11
 description: ""
 tags: [CI/CD, AWS, DevOps, Automation]
-category: DevOps
+category: CI/CD
 draft: false
 ---
 
