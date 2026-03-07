@@ -7,8 +7,6 @@ category: Productivity
 draft: false
 ---
 
-June 23, 2023
-
 [Entropy](https://en.wikipedia.org/wiki/Entropy) is a concept in physics that refers to the measure of disorder or randomness of a system. Entropy is related to the second law of thermodynamics, which states that the total entropy of a closed system can only increase over time. This means that systems tend to move towards states of maximum disorder, or maximum entropy, over time.
 
 In our modern world, we have so much to worry about: jobs, relationships, housing, finances, pets, children, electronics, and online profiles. Without a process set up to review, categorize, and delete items related to these areas, we end up with endless clutter that takes ages to sift through when we need to find something. This is where regular reviews come in.

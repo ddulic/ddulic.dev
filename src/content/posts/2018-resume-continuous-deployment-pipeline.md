@@ -7,9 +7,6 @@ category: CI/CD
 draft: false
 ---
 
----
-
-
 # **Introduction**
 
 In my [2018 Website Continuous Deployment Pipeline](https://github.com/ddulic/damir.tech/blob/master/posts/2018-website-pipeline) I forgot to include one crucial part of my website - my [Resume](https://damir.tech/resume/) Page.

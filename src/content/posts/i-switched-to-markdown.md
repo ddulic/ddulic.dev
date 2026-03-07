@@ -7,9 +7,6 @@ category: Blogging
 draft: false
 ---
 
----
-
-
 # **The Why**
 
 I needed to organize my files somehow. I had documents in:
