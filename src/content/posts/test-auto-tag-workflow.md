@@ -1,7 +1,7 @@
 ---
 title: "Test Auto Tag Workflow"
 published: 2026-03-07
-description: "A test post to verify the PR auto-tag workflow is working correctly."
+description: "Covers how a GitHub Actions workflow automatically assigns tags, categories, and descriptions to new blog posts by leveraging Claude AI on pull requests."
 tags: [CI/CD, DevOps, Kubernetes, Linux]
 category: CI/CD
 draft: true
