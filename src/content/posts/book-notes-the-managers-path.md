@@ -1,7 +1,7 @@
 ---
 title: "Book Notes: The Manager's Path"
 published: 2021-03-21
-description: ""
+description: "Notes and favourite quotes from The Manager's Path by Camille Fournier, a must-read for engineers transitioning into tech lead or management roles."
 tags: [Book Notes, Career]
 category: Management
 draft: false

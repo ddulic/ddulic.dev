@@ -1,7 +1,7 @@
 ---
 title: "Generate Kubernetes Manifests from Helm Charts"
 published: 2022-05-18
-description: ""
+description: "How to generate Kubernetes manifests from Helm charts using helm template and adapt them for use with Kustomize in an automated workflow."
 tags: [Kubernetes, DevOps]
 category: Kubernetes
 draft: false

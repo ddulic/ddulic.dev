@@ -1,4 +1,4 @@
-name: Auto Tag and Categorize Blog Posts
+name: Auto Enrich Blog Posts
 
 on:
   pull_request:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  auto-tag:
+  auto-enrich:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -33,7 +33,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Auto-tag blog posts
+      - name: Auto-enrich blog posts
         if: steps.changed-posts.outputs.files != ''
         uses: anthropics/claude-code-action@main
         with:
@@ -56,7 +56,14 @@ jobs:
           prompt: |
             A new blog post was added in this PR. The changed file(s): ${{ steps.changed-posts.outputs.files }}
 
-            Your task is to ensure every post's tags and category are accurate and consistent across the entire blog.
+            Your task is to ensure every post's tags, category, and description are accurate and consistent across the entire blog.
+
+            Description rules:
+            - The `description:` field must be a single sentence summarising the post content
+            - Length must be between 110 and 160 characters (inclusive)
+            - Write it in an active, informative style — describe what the post covers or teaches
+            - NEVER leave the description empty or use a placeholder value
+            - Only update the description if it is empty ("") or clearly a placeholder
 
             Tag rules:
             - A tag may only appear on a post if that same tag also appears on at least one OTHER post in src/content/posts/
@@ -71,13 +78,16 @@ jobs:
             - NEVER use generic categories such as: Personal, General, Misc, Other, Various
 
             Steps:
-            1. Read ALL files in src/content/posts/ to understand the full tag landscape
+            1. Read ALL files in src/content/posts/ to understand the full tag landscape and existing descriptions
             2. Build a frequency map of every tag across all posts
-            3. For the changed post(s), identify candidate tags from the post content
-            4. Only assign a candidate tag if it already exists on at least one other post (frequency >= 2 after adding it)
-            5. Update the `tags:` line of the changed post(s) with the valid tags (up to 5)
-            6. Update the `category:` line of the changed post(s) with the most significant topic
-            7. If any existing tags on other posts now only appear on a single post due to this change, remove them from those posts too to maintain consistency
-            8. Stage all modified files with `git add`
-            9. Commit with message "auto-tag: update tags and category for [filename]"
-            10. Push to the current branch with `git push`
+            3. For the changed post(s), read the full content
+            4. If the description is empty or a placeholder, generate a new one (110-160 chars) based on the post content
+            5. Identify candidate tags from the post content
+            6. Only assign a candidate tag if it already exists on at least one other post (frequency >= 2 after adding it)
+            7. Update the `description:` field of the changed post(s) if needed
+            8. Update the `tags:` line of the changed post(s) with the valid tags (up to 5)
+            9. Update the `category:` line of the changed post(s) with the most significant topic
+            10. If any existing tags on other posts now only appear on a single post due to this change, remove them from those posts too to maintain consistency
+            11. Stage all modified files with `git add`
+            12. Commit with message "auto-enrich: update tags, category, and description for [filename]"
+            13. Push to the current branch with `git push`

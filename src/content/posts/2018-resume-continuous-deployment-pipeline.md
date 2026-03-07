@@ -1,7 +1,7 @@
 ---
 title: "2018 Resume Continuous Deployment Pipeline"
 published: 2018-03-11
-description: ""
+description: "How to build a CI/CD pipeline for a Markdown resume using Travis CI and AWS S3, auto-generating a webpage and PDF from a single git push."
 tags: [CI/CD, AWS, DevOps, Automation]
 category: CI/CD
 draft: false

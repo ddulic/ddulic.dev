@@ -1,7 +1,7 @@
 ---
 title: "Migrate Hexo to Hugo"
 published: 2020-10-13
-description: ""
+description: "Notes from migrating a blog from Hexo to Hugo, covering theme setup, post format differences, custom CSS, and switching CI from Travis to GitHub Actions."
 tags: [Blogging, Migration]
 category: Blogging
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "Linux Podcasts"
 published: 2016-11-04
-description: ""
+description: "A curated list of Linux podcasts worth listening to, including Linux Unplugged, Ubuntu Podcast, Late Night Linux, and Pocket Casts as player."
 tags: [Linux]
 category: Linux
 draft: false
