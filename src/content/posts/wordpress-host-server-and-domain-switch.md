@@ -1,7 +1,7 @@
 ---
 title: "WordPress Host/Server and Domain Switch"
 published: 2016-05-07
-description: ""
+description: "Step-by-step walkthrough for migrating a WordPress site to a new server and domain using DigitalOcean, Cloudflare, and All-in-One WP Migration."
 tags: [Blogging, Migration, Cloudflare]
 category: Blogging
 draft: false

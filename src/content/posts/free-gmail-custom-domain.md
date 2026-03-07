@@ -1,7 +1,7 @@
 ---
 title: "Free Gmail Custom Domain"
 published: 2016-05-27
-description: ""
+description: "How to use Gmail with a custom domain for free by setting up a Mailgun SMTP alias, avoiding the need for a paid Google Workspace subscription."
 tags: [DNS]
 category: Email
 draft: false

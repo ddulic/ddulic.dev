@@ -1,7 +1,7 @@
 ---
 title: "What WoW Taught Me"
 published: 2022-01-06
-description: ""
+description: "Reflections on how World of Warcraft mechanics like daily quests, reputation, and raids map to real-life lessons about productivity and personal growth."
 tags: [Gaming, Productivity]
 category: Gaming
 draft: false

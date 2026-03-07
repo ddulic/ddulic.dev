@@ -1,7 +1,7 @@
 ---
 title: "Open Policy Agent in DevOps"
 published: 2020-09-12
-description: ""
+description: "An overview of Open Policy Agent for unified policy enforcement in DevOps, covering OPA Gatekeeper for Kubernetes and Conftest for config files."
 tags: [DevOps, Kubernetes, Security]
 category: DevOps
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "Lenovo y50-70 Hackintosh"
 published: 2015-11-26
-description: ""
+description: "A guide to installing macOS El Capitan on a Lenovo y50-70 as a Hackintosh with dual boot, using Clover UEFI and RehabMan's post-install patches."
 tags: [Hackintosh, macOS, Lenovo, Hardware]
 category: Hackintosh
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "AWS Well-Architected Framework Notes"
 published: 2018-10-28
-description: ""
+description: "Personal notes and key takeaways from all five AWS Well-Architected Framework pillars: security, reliability, performance efficiency, and cost."
 tags: [AWS, Security, Reliability]
 category: AWS
 draft: false
