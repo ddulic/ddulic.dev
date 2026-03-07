@@ -1,7 +1,7 @@
 ---
 title: "Certified Kubernetes Administrator (CKA) Notes"
 published: 2021-08-24
-description: ""
+description: "Personal study notes from the CKA exam prep course, covering Kubernetes architecture, workloads, networking, storage, and cluster administration."
 tags: [Kubernetes, DevOps]
 category: Kubernetes
 draft: false

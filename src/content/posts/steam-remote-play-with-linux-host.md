@@ -1,7 +1,7 @@
 ---
 title: "Steam Remote Play with Linux Host"
 published: 2023-08-22
-description: ""
+description: "A comprehensive guide to setting up Steam Remote Play on an Arch Linux host with Nvidia GPU for low-latency game streaming to a Steam Deck."
 tags: [Linux, Gaming]
 category: Gaming
 draft: false

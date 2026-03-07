@@ -1,7 +1,7 @@
 ---
 title: "Cloudflare Terraform Provider Tips"
 published: 2023-06-29
-description: ""
+description: "Practical tips for using the Cloudflare Terraform provider, covering API token quirks, zone imports, ruleset ordering issues, and Page Rule priorities."
 tags: [Terraform, Cloudflare, DNS, IaC]
 category: Terraform
 draft: false

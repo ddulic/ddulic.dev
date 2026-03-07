@@ -1,7 +1,7 @@
 ---
 title: "Questions in Interviews"
 published: 2020-05-25
-description: ""
+description: "Practical advice on asking better questions in job interviews, showing genuine curiosity and evaluating companies as much as they evaluate you."
 tags: [Career]
 category: Career
 draft: false

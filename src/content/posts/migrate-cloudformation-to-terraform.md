@@ -1,7 +1,7 @@
 ---
 title: "Migrate CloudFormation to Terraform"
 published: 2023-03-28
-description: ""
+description: "A step-by-step guide to migrating AWS CloudFormation resources to Terraform without destroying them, using DeletionPolicy and state manipulation tools."
 tags: [Terraform, AWS, Migration, IaC]
 category: Terraform
 draft: false
