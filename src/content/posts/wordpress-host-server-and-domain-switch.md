@@ -2,7 +2,7 @@
 title: "WordPress Host/Server and Domain Switch"
 published: 2016-05-07
 description: ""
-tags: [WordPress]
+tags: [WordPress, Blogging, Migration, Cloudflare, Domain]
 category: Blogging
 draft: false
 ---

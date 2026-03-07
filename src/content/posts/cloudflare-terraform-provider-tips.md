@@ -2,7 +2,7 @@
 title: "Cloudflare Terraform Provider Tips"
 published: 2023-06-29
 description: ""
-tags: [Terraform, Cloudflare]
+tags: [Terraform, Cloudflare, DNS, IaC, API]
 category: Terraform
 draft: false
 ---

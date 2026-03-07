@@ -2,7 +2,7 @@
 title: "Linux Podcasts"
 published: 2016-11-04
 description: ""
-tags: [Linux]
+tags: [Linux, Podcasts, Recommendations]
 category: Linux
 draft: false
 ---
