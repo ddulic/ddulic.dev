@@ -2,7 +2,7 @@
 title: "2018 Website Continuous Deployment Pipeline"
 published: 2018-02-17
 description: ""
-tags: []
+tags: [CI/CD, AWS, S3, CloudFront]
 category: DevOps
 draft: false
 ---

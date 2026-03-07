@@ -2,7 +2,7 @@
 title: "Free Gmail Custom Domain"
 published: 2016-05-27
 description: ""
-tags: []
+tags: [Email, Gmail, DNS, Custom Domain]
 category: DevOps
 draft: false
 ---

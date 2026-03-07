@@ -2,7 +2,7 @@
 title: "Open Policy Agent in DevOps"
 published: 2020-09-12
 description: ""
-tags: [DevOps]
+tags: [DevOps, OPA, Kubernetes, Security, Policy]
 category: DevOps
 draft: false
 ---
