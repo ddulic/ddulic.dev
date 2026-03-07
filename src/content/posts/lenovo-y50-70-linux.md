@@ -2,7 +2,7 @@
 title: "Lenovo y50-70 Linux?"
 published: 2015-11-30
 description: ""
-tags: [Linux, Hardware, Lenovo, Setup]
+tags: [Linux, Hardware, Lenovo]
 category: Linux
 draft: false
 ---
