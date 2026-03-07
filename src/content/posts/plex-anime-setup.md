@@ -3,7 +3,7 @@ title: "Plex Anime Setup"
 published: 2017-06-20
 description: ""
 tags: [Plex, Anime, Linux, Media Server]
-category: Productivity
+category: Media
 draft: false
 ---
 

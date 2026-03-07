@@ -3,7 +3,7 @@ title: "Steam Remote Play with Linux Host"
 published: 2023-08-22
 description: ""
 tags: [Linux, Steam, Gaming, Steam Deck, Streaming]
-category: Linux
+category: Gaming
 draft: false
 ---
 

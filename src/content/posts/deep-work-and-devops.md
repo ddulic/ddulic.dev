@@ -3,7 +3,7 @@ title: "Deep Work and DevOps"
 published: 2021-06-08
 description: ""
 tags: [DevOps, Productivity, Focus, Deep Work]
-category: DevOps
+category: Productivity
 draft: false
 ---
 

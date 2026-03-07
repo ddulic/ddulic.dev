@@ -3,7 +3,7 @@ title: "Kong Validating Admission Controller Webhook with cert-manager"
 published: 2021-03-19
 description: ""
 tags: [Kong, Kubernetes, cert-manager, TLS, DevOps]
-category: DevOps
+category: Kubernetes
 draft: false
 ---
 
