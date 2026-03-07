@@ -158,7 +158,7 @@ kubectl expose deployment simple-webapp-deployment --name=webapp-service --targe
 
 ## Imperative vs Declarative
 
-![](../../assets/images/certified-kubernetes-administrator-cka-notes/Screenshot_2021-04-26_at_16.48.17.png)
+![](../../assets/images/certified-kubernetes-administrator-cka-notes/kubernetes-imperative-vs-declarative.png)
 
 :::note
 kubectl create is imperative and kubectl apply is declarative.
@@ -584,7 +584,7 @@ spec:
 - `major.minor.patch` (1.11.3 for example)
 - 1.0 was released in July 2015
 
-![](../../assets/images/certified-kubernetes-administrator-cka-notes/Screenshot_2021-06-11_at_17.13.16.png)
+![](../../assets/images/certified-kubernetes-administrator-cka-notes/kubernetes-software-versions.png)
 
 ## Cluster Upgrade Process
 
@@ -692,7 +692,7 @@ The following CLIENT components have certificates:
 - kube-controller-manager
 - kube-proxy
 
-![](../../assets/images/certified-kubernetes-administrator-cka-notes/Screenshot_2021-06-15_at_10.16.44.png)
+![](../../assets/images/certified-kubernetes-administrator-cka-notes/kubernetes-tls-certificate-components.png)
 
 ---
 
@@ -907,7 +907,7 @@ For example:
 
 Below are the defaults if you only do `nginx` in the image field
 
-![](../../assets/images/certified-kubernetes-administrator-cka-notes/Screenshot_2021-06-30_at_16.53.56.png)
+![](../../assets/images/certified-kubernetes-administrator-cka-notes/kubernetes-image-registry-defaults.png)
 
 **If we want to use an image from a private registry, we have to add the full image registry path.**
 
@@ -1419,7 +1419,7 @@ NodePort does the same but also exposes the service on a port on all the Nodes.
 
 **Services aren't assigned to a single node, they don't really "exist". `kube-proxy` creates forwarding rules for the service on each Node.**
 
-![](../../assets/images/certified-kubernetes-administrator-cka-notes/Untitled.png)
+![](../../assets/images/certified-kubernetes-administrator-cka-notes/kubernetes-service-networking-clusterip.png)
 
 **There are 3 modes in which `kube-proxy` does this:**
 
@@ -1447,7 +1447,7 @@ web-service.apps.svc
 
 Records for pods aren't enabled by default. It uses the IP address as the name but replaces the `.` with `-`.
 
-![](../../assets/images/certified-kubernetes-administrator-cka-notes/Untitled 1.png)
+![](../../assets/images/certified-kubernetes-administrator-cka-notes/kubernetes-pod-dns-records.png)
 
 ## CoreDNS in Kubernetes
 
