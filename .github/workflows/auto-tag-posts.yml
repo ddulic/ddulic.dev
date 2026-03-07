@@ -32,21 +32,6 @@ jobs:
         uses: anthropics/claude-code-action@main
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          settings: |
-            {
-              "permissions": {
-                "allow": [
-                  "Edit",
-                  "Write",
-                  "Bash(git add:*)",
-                  "Bash(git commit:*)",
-                  "Bash(git push:*)",
-                  "Bash(git diff:*)",
-                  "Bash(git log:*)"
-                ],
-                "deny": []
-              }
-            }
           prompt: |
             A new blog post was added in this PR. The changed file(s): ${{ steps.changed-posts.outputs.files }}
 
