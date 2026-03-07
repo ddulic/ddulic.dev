@@ -34,14 +34,17 @@ jobs:
           prompt: |
             A blog post was just pushed. The changed file(s): ${{ steps.changed-posts.outputs.files }}
 
-            Your task is to ensure every post's tags are accurate and consistent across the entire blog.
+            Your task is to ensure every post's tags and category are accurate and consistent across the entire blog.
 
-            Rules:
+            Tag rules:
             - A tag may only appear on a post if that same tag also appears on at least one OTHER post in src/content/posts/
             - Tags must be shared across 2 or more posts to be valid
             - Each post may have a maximum of 5 tags
             - Tags should be concise and title-cased (e.g. Terraform, Kubernetes, DevOps, Linux, Productivity)
-            - Only modify the `tags:` line in the frontmatter — do not change anything else
+
+            Category rules:
+            - Set the `category:` field to the single most significant topic of the post
+            - The category should be a single concise noun or proper noun (e.g. Terraform, Kubernetes, Productivity, Linux, Gaming, Blogging, Career, CI/CD, AWS)
 
             Steps:
             1. Read ALL files in src/content/posts/ to understand the full tag landscape
@@ -49,4 +52,5 @@ jobs:
             3. For the changed post(s), identify candidate tags from the post content
             4. Only assign a candidate tag if it already exists on at least one other post (frequency >= 2 after adding it)
             5. Update the `tags:` line of the changed post(s) with the valid tags (up to 5)
-            6. If any existing tags on other posts now only appear on a single post due to this change, remove them from those posts too to maintain consistency
+            6. Update the `category:` line of the changed post(s) with the most significant topic
+            7. If any existing tags on other posts now only appear on a single post due to this change, remove them from those posts too to maintain consistency
