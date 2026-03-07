@@ -9,6 +9,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  id-token: write
 
 jobs:
   auto-tag:
@@ -41,10 +42,12 @@ jobs:
             - Tags must be shared across 2 or more posts to be valid
             - Each post may have a maximum of 5 tags
             - Tags should be concise and title-cased (e.g. Terraform, Kubernetes, DevOps, Linux, Productivity)
+            - NEVER use generic, vague tags such as: Personal, Setup, General, Misc, Other, Various, Tips, Guide, Tutorial
 
             Category rules:
             - Set the `category:` field to the single most significant topic of the post
             - The category should be a single concise noun or proper noun (e.g. Terraform, Kubernetes, Productivity, Linux, Gaming, Blogging, Career, CI/CD, AWS)
+            - NEVER use generic categories such as: Personal, General, Misc, Other, Various
 
             Steps:
             1. Read ALL files in src/content/posts/ to understand the full tag landscape
