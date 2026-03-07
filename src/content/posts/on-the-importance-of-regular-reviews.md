@@ -1,7 +1,7 @@
 ---
 title: "On the Importance of Regular Reviews"
 published: 2023-06-23
-description: ""
+description: "How regular weekly, monthly, and yearly reviews help combat entropy in our digital and physical lives, boosting productivity and reducing clutter."
 tags: [Productivity]
 category: Productivity
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "DevOps Notion Setup"
 published: 2020-07-25
-description: ""
+description: "A Notion-based productivity system for DevOps engineers featuring a ticket-centric workflow, structured notes, and daily logs for standups."
 tags: [DevOps, Notion, Productivity]
 category: Productivity
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "Kong Validating Admission Controller Webhook with cert-manager"
 published: 2021-03-19
-description: ""
+description: "How to configure Kong's Validating Admission Controller webhook with cert-manager for automated TLS certificate renewal in Kubernetes."
 tags: [Kubernetes, DevOps]
 category: Kubernetes
 draft: false

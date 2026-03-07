@@ -1,7 +1,7 @@
 ---
 title: "Hello World!"
 published: 2015-10-12
-description: ""
+description: "Welcome to the blog — the obligatory Hello World first post marking the start of a personal tech and DevOps journey."
 tags: [Blogging]
 category: Blogging
 draft: false
