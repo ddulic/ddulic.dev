@@ -22,6 +22,14 @@ When a PR is opened that modifies files in `src/content/posts/`, the workflow:
 3. Assigns only tags that appear on at least one other post
 4. Updates the frontmatter with up to 5 valid tags and a category
 
+![](../../assets/images/test-auto-tag-workflow/JxxlPRmeHVXDV8YQh.png)
+
+## Kubernetes node overview
+
+The diagram below shows the high-level architecture of a Kubernetes node as referenced in CKA study notes.
+
+![](../../assets/images/test-auto-tag-workflow/Screenshot_2021-04-26_at_16.48.17.png)
+
 ## Topics covered
 
 This post touches on DevOps practices, Kubernetes workflows, Linux tooling, and CI/CD pipelines — all common themes across this blog.
