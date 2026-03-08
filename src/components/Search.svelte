@@ -191,6 +191,9 @@ top-20 left-4 md:left-[unset] right-4 shadow-2xl rounded-2xl p-2">
   input:focus {
     outline: 0;
   }
+  #search-bar-inside input {
+    font-size: 16px;
+  }
   .search-panel {
     max-height: calc(100vh - 100px);
     overflow-y: auto;
