@@ -124,6 +124,9 @@ const bannerOffset =
 				  media={favicon.theme && `(prefers-color-scheme: ${favicon.theme})`}
 			/>
 		))}
+		<link rel="apple-touch-icon" href={url("/favicon/apple-touch-icon-light.png")} media="(prefers-color-scheme: light)" />
+		<link rel="apple-touch-icon" href={url("/favicon/apple-touch-icon-dark.png")} media="(prefers-color-scheme: dark)" />
+		<link rel="manifest" href={url("/favicon/site.webmanifest")} />
 
 		<!-- Set the theme before the page is rendered to avoid a flash -->
 		<script is:inline define:vars={{DEFAULT_THEME, LIGHT_MODE, DARK_MODE, AUTO_MODE, BANNER_HEIGHT_EXTEND, PAGE_WIDTH, configHue}}>
