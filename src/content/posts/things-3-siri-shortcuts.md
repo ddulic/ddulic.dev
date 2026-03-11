@@ -75,7 +75,6 @@ After you make your input, the item is created.
 
 ## Data Jar Values
 
-If for whatever reason you want to see/use my Data Jar values, download the backup (the easiest way to export items from what I could find), and restore the backup. I don't know if this will overwrite any existing values you have in Data Jar before restoring from backup.
 
 ![](../../assets/images/things-3-siri-shortcuts/things3-data-jar-backup.png)
 
