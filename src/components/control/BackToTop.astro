@@ -5,8 +5,8 @@ import { Icon } from "astro-icon/components";
 <!-- There can't be a filter on parent element, or it will break `fixed` -->
 <div class="back-to-top-wrapper block">
     <div id="back-to-top-btn" class="back-to-top-btn hide flex items-center rounded-sm overflow-hidden transition" onclick="backToTop()">
-        <button aria-label="Back to Top" class="btn-card h-[3.75rem] w-[3.75rem]">
-            <Icon name="material-symbols:keyboard-arrow-up-rounded" class="mx-auto"></Icon>
+        <button aria-label="Back to Top" class="btn-regular h-[3rem] w-[3rem] sm:h-[3.75rem] sm:w-[3.75rem]">
+            <Icon name="material-symbols:keyboard-arrow-up-rounded" class="mx-auto text-[2rem]"></Icon>
         </button>
     </div>
 </div>
@@ -21,35 +21,30 @@ import { Icon } from "astro-icon/components";
     pointer-events: none
 
 .back-to-top-btn
-    color: var(--primary)
     font-size: 2.25rem
     font-weight: bold
     border: none
     position: fixed
     bottom: 1.5rem
-    right: 1rem
+    right: 1.5rem
     opacity: 1
     cursor: pointer
-    transform: translateY(0)
     pointer-events: auto
-    i
-        font-size: 1.75rem
+    transform: translateY(0)
     &.hide
         transform: translateY(0.5rem) scale(0.9)
         opacity: 0
         pointer-events: none
     &:active
-      transform: scale(0.9)
-    @media (min-width: 1024px)
-        bottom: 10rem
-        right: auto
-        transform: translateX(5rem)
+        transform: scale(0.9)
+    @media (min-width: 1344px)
+        right: calc((100vw - var(--page-width)) / 2 - 4.5rem)
         &.hide
-            transform: translateX(5rem) scale(0.9)
+            transform: translateX(1rem) scale(0.9)
             opacity: 0
             pointer-events: none
         &:active
-            transform: translateX(5rem) scale(0.9)
+            transform: scale(0.9)
 
 </style>
 
