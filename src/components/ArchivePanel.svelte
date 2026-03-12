@@ -107,7 +107,7 @@ onMount(async () => {
                 <a
                         href={getPostUrlBySlug(post.slug)}
                         aria-label={post.data.title}
-                        class="group btn-plain !block h-10 w-full rounded hover:text-[initial]"
+                        class="group btn-plain !block h-10 w-full rounded-sm hover:text-[initial]"
                 >
                     <div class="flex flex-row justify-start items-center h-full">
                         <!-- date -->
@@ -118,7 +118,7 @@ onMount(async () => {
                         <!-- dot and line -->
                         <div class="w-[15%] md:w-[10%] relative dash-line h-full flex items-center">
                             <div
-                                    class="transition-all mx-auto w-1 h-1 rounded group-hover:h-5
+                                    class="transition-all mx-auto w-1 h-1 rounded-sm group-hover:h-5
                        bg-[oklch(0.5_0.05_var(--hue))] group-hover:bg-[var(--primary)]
                        outline outline-4 z-50
                        outline-[var(--card-bg)]
