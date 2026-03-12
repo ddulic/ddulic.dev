@@ -40,16 +40,14 @@ import { Icon } from "astro-icon/components";
     @media (max-width: 639px)
         bottom: 1.5rem
         right: 1.5rem
-    @media (min-width: 1536px)
-        bottom: 1.5rem
-        right: auto
-        transform: translateX(5rem)
+    @media (min-width: 1344px)
+        right: calc((100vw - var(--page-width)) / 2 - 4.5rem)
         &.hide
-            transform: translateX(5rem) scale(0.9)
+            transform: translateX(1rem) scale(0.9)
             opacity: 0
             pointer-events: none
         &:active
-            transform: translateX(5rem) scale(0.9)
+            transform: scale(0.9)
 
 </style>
 
