@@ -84,6 +84,9 @@ importers:
       astro-link-validator:
         specifier: github:rodgtr1/astro-link-validator
         version: https://codeload.github.com/rodgtr1/astro-link-validator/tar.gz/025a27b2582234084b3676bc725418b5fc429dcd(astro@5.18.0(@types/node@25.4.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.80.0)(sass@1.80.4)(stylus@0.64.0)(terser@5.46.0)(typescript@5.9.3)(yaml@2.8.2))
+      astro-social-share:
+        specifier: ^2.2.0
+        version: 2.2.0
       hastscript:
         specifier: ^9.0.1
         version: 9.0.1
@@ -2122,6 +2125,9 @@ packages:
     version: 1.0.0
     peerDependencies:
       astro: ^4.0.0 || ^5.0.0
+
+  astro-social-share@2.2.0:
+    resolution: {integrity: sha512-Z5ebhO6Yw4GLggw7wsTahdpS0f4pf/XuVjQlBpWZ0zyt0cKaVrlG/+u6RzrzN9B2t27wxp90XiosZNwvBZqA+Q==}
 
   astro@5.18.0:
     resolution: {integrity: sha512-CHiohwJIS4L0G6/IzE1Fx3dgWqXBCXus/od0eGUfxrZJD2um2pE7ehclMmgL/fXqbU7NfE1Ze2pq34h2QaA6iQ==}
@@ -7491,6 +7497,8 @@ snapshots:
       astro: 5.18.0(@types/node@25.4.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.80.0)(sass@1.80.4)(stylus@0.64.0)(terser@5.46.0)(typescript@5.9.3)(yaml@2.8.2)
       cheerio: 1.0.0
       picocolors: 1.1.1
+
+  astro-social-share@2.2.0: {}
 
   astro@5.18.0(@types/node@25.4.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.80.0)(sass@1.80.4)(stylus@0.64.0)(terser@5.46.0)(typescript@5.9.3)(yaml@2.8.2):
     dependencies:

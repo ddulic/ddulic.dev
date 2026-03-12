@@ -36,6 +36,7 @@
     "astro-expressive-code": "^0.41.7",
     "astro-icon": "^1.1.5",
     "astro-link-validator": "github:rodgtr1/astro-link-validator",
+    "astro-social-share": "^2.2.0",
     "hastscript": "^9.0.1",
     "katex": "^0.16.38",
     "markdown-it": "^14.1.1",
