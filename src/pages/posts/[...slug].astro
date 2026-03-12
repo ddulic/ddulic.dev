@@ -8,6 +8,13 @@ import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { getSortedPosts } from "@utils/content-utils";
 import { getDir, getPostUrlBySlug } from "@utils/url-utils";
 import { Icon } from "astro-icon/components";
+import {
+	BlueskyShareButton,
+	HackerNewsShareButton,
+	LinkedInShareButton,
+	RedditShareButton,
+	TwitterShareButton,
+} from "astro-social-share";
 import { licenseConfig } from "src/config";
 import ImageWrapper from "../../components/misc/ImageWrapper.astro";
 import PostMetadata from "../../components/PostMeta.astro";
@@ -109,6 +116,15 @@ const jsonLd = {
 
             {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-sm license-container onload-animation"></License>}
 
+            <div class="flex items-center gap-3 pt-4 border-t border-dashed border-[var(--line-divider)] onload-animation">
+                <span class="text-sm text-black/30 dark:text-white/30 transition">Share</span>
+                <HackerNewsShareButton title={entry.data.title} url={new URL(Astro.url.pathname, Astro.site).toString()} />
+                <LinkedInShareButton title={entry.data.title} url={new URL(Astro.url.pathname, Astro.site).toString()} />
+                <RedditShareButton title={entry.data.title} url={new URL(Astro.url.pathname, Astro.site).toString()} />
+                <TwitterShareButton title={entry.data.title} url={new URL(Astro.url.pathname, Astro.site).toString()} />
+                <BlueskyShareButton title={entry.data.title} url={new URL(Astro.url.pathname, Astro.site).toString()} />
+            </div>
+
         </div>
     </div>
 
@@ -135,3 +151,18 @@ const jsonLd = {
     </div>
 
 </MainGridLayout>
+
+<style is:global>
+.social-share-btn svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: rgba(0, 0, 0, 0.3);
+    transition: fill 0.2s;
+}
+.dark .social-share-btn svg {
+    fill: rgba(255, 255, 255, 0.3);
+}
+.social-share-btn:hover svg {
+    fill: var(--primary);
+}
+</style>
