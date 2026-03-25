@@ -38,7 +38,7 @@
     "astro-link-validator": "https://github.com/rodgtr1/astro-link-validator",
     "astro-social-share": "^2.2.0",
     "hastscript": "^9.0.1",
-    "katex": "^0.16.40",
+    "katex": "^0.16.42",
     "markdown-it": "^14.1.1",
     "mdast-util-to-string": "^4.0.0",
     "overlayscrollbars": "^2.14.0",
@@ -65,7 +65,7 @@
   },
   "devDependencies": {
     "@astrojs/ts-plugin": "^1.10.7",
-    "@biomejs/biome": "2.4.8",
+    "@biomejs/biome": "2.4.9",
     "@rollup/plugin-yaml": "^4.1.2",
     "@types/hast": "^3.0.4",
     "@types/markdown-it": "^14.1.2",
