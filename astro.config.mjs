@@ -25,7 +25,6 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 import { targetBlank } from "./src/plugins/target-blank.ts";
 import { rehypeOptimizeImages } from "./src/plugins/rehype-optimize-images.ts";
-import linkValidator from "astro-link-validator";
 
 // https://astro.build/config
 export default defineConfig({
@@ -103,7 +102,6 @@ export default defineConfig({
 		}),
         svelte(),
 		sitemap(),
-		linkValidator(),
 	],
 	markdown: {
 		remarkPlugins: [
