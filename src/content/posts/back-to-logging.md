@@ -1,11 +1,11 @@
-——-
-title: “Back to Blogging: How AI Simplified My Migration”
+---
+title: "Back to Blogging: How AI Simplified My Migration"
 published: 2026-04-03
-description: “How AI tools like Claude Code made migrating a blog from Notion to GitHub Pages fast, enabling a return to blogging with minimal technical friction.”
+description: "How AI tools like Claude Code made migrating a blog from Notion to GitHub Pages fast, enabling a return to blogging with minimal technical friction."
 tags: [Blogging, Migration, Notion]
 category: Blogging
 draft: false
-——-
+---
 
 Hello all, it has been a long time since I last published a post. I’ve had quite a few life events that forced me to reflect on what I was doing, and I didn’t feel like posting anything—partially because I wasn’t doing anything interesting.
 
