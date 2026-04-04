@@ -83,9 +83,6 @@ importers:
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5
-      astro-link-validator:
-        specifier: https://github.com/rodgtr1/astro-link-validator
-        version: https://codeload.github.com/rodgtr1/astro-link-validator/tar.gz/025a27b2582234084b3676bc725418b5fc429dcd(astro@5.18.1(@types/node@25.4.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.80.0)(sass@1.80.4)(stylus@0.64.0)(terser@5.46.0)(typescript@5.9.3)(yaml@2.8.2))
       astro-social-share:
         specifier: ^2.2.0
         version: 2.2.0
@@ -2121,12 +2118,6 @@ packages:
 
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
-
-  astro-link-validator@https://codeload.github.com/rodgtr1/astro-link-validator/tar.gz/025a27b2582234084b3676bc725418b5fc429dcd:
-    resolution: {tarball: https://codeload.github.com/rodgtr1/astro-link-validator/tar.gz/025a27b2582234084b3676bc725418b5fc429dcd}
-    version: 1.0.0
-    peerDependencies:
-      astro: ^4.0.0 || ^5.0.0
 
   astro-social-share@2.2.0:
     resolution: {integrity: sha512-Z5ebhO6Yw4GLggw7wsTahdpS0f4pf/XuVjQlBpWZ0zyt0cKaVrlG/+u6RzrzN9B2t27wxp90XiosZNwvBZqA+Q==}
@@ -7496,12 +7487,6 @@ snapshots:
     transitivePeerDependencies:
       - debug
       - supports-color
-
-  astro-link-validator@https://codeload.github.com/rodgtr1/astro-link-validator/tar.gz/025a27b2582234084b3676bc725418b5fc429dcd(astro@5.18.1(@types/node@25.4.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.80.0)(sass@1.80.4)(stylus@0.64.0)(terser@5.46.0)(typescript@5.9.3)(yaml@2.8.2)):
-    dependencies:
-      astro: 5.18.1(@types/node@25.4.0)(jiti@1.21.7)(lightningcss@1.29.3)(rollup@2.80.0)(sass@1.80.4)(stylus@0.64.0)(terser@5.46.0)(typescript@5.9.3)(yaml@2.8.2)
-      cheerio: 1.0.0
-      picocolors: 1.1.1
 
   astro-social-share@2.2.0: {}
 
