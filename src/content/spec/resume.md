@@ -1,3 +1,7 @@
+---
+title: "Resume"
+---
+
 # Damir Dulic, Systems Engineering Lead
 
 - Comprehensive technical knowledge and hands-on experience in the design and implementation of fully automated systems

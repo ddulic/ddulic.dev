@@ -1,12 +1,24 @@
+@reference "../styles/main.css";
+
 .pswp__button {
-    @apply transition bg-black/40 hover:bg-black/50 active:bg-black/60 flex items-center justify-center mr-0 w-12 h-12 !important;
+    @apply transition flex items-center justify-center;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 3rem;
+    width: 3rem;
+    margin-right: 0;
+}
+.pswp__button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.pswp__button:active {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 .pswp__button--zoom, .pswp__button--close {
-    @apply mt-4 rounded-xl active:scale-90 !important;
+    @apply mt-4 rounded-xl active:scale-90;
 }
 .pswp__button--zoom {
-    @apply mr-2.5 !important;
+    margin-right: 0.625rem;
 }
 .pswp__button--close {
-    @apply mr-4 !important;
+    margin-right: 1rem;
 }
