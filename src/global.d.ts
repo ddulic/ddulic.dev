@@ -39,3 +39,14 @@ interface SearchResult {
 	raw_url?: string;
 	sub_results?: SearchResult[];
 }
+
+// biome-ignore lint/correctness/noUnusedVariables: Used in type assertions throughout the codebase
+interface PostData {
+	title: string;
+	published: Date;
+	description?: string;
+	tags: string[];
+	category?: string | null;
+	draft?: boolean;
+	image?: string | null;
+}

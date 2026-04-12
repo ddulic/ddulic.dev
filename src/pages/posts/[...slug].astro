@@ -31,8 +31,8 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 
-const headings: any[] = [];
-const entryData = entry.data as any;
+const headings: import("astro").MarkdownHeading[] = [];
+const entryData = entry.data as PostData;
 const description = entryData.description || entryData.title;
 
 const jsonLd = {

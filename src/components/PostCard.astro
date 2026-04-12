@@ -36,7 +36,7 @@ const {
 } = Astro.props;
 const className = Astro.props.class;
 
-const entryData = entry.data as any;
+const entryData = entry.data as PostData;
 const hasCover = image !== undefined && image !== null && image !== "";
 
 const coverWidth = "28%";

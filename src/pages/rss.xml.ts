@@ -27,7 +27,7 @@ export async function GET(context: APIContext) {
 			const content =
 				typeof post.body === "string" ? post.body : String(post.body || "");
 			const cleanedContent = stripInvalidXmlChars(content);
-			const postData = post.data as any;
+			const postData = post.data as PostData;
 			return {
 				title: postData.title,
 				pubDate: postData.published,

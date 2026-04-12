@@ -24,7 +24,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 	}
 
 	const allPosts = await getCollection("posts");
-	const publishedPosts = allPosts.filter((post) => !(post.data as any).draft);
+	const publishedPosts = allPosts.filter(
+		(post) => !(post.data as PostData).draft,
+	);
 
 	return publishedPosts.map((post) => ({
 		params: { slug: post.id },
@@ -108,13 +110,16 @@ export async function GET({
 	const subtleTextColor = `hsl(${hue}, 10%, 75%)`;
 	const backgroundColor = `hsl(${hue}, 15%, 12%)`;
 
-	const pubDate = (post.data as any).published.toLocaleDateString("en-US", {
-		year: "numeric",
-		month: "short",
-		day: "numeric",
-	});
+	const pubDate = (post.data as PostData).published.toLocaleDateString(
+		"en-US",
+		{
+			year: "numeric",
+			month: "short",
+			day: "numeric",
+		},
+	);
 
-	const description = (post.data as any).description;
+	const description = (post.data as PostData).description;
 
 	const template = {
 		type: "div",
@@ -211,7 +216,7 @@ export async function GET({
 													WebkitLineClamp: 3,
 													WebkitBoxOrient: "vertical",
 												},
-												children: (post.data as any).title,
+												children: (post.data as PostData).title,
 											},
 										},
 									],
