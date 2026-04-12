@@ -33,8 +33,7 @@ const { entry } = Astro.props;
 
 const headings: any[] = [];
 const entryData = entry.data as any;
-const description =
-	entryData.description || entryData.title;
+const description = entryData.description || entryData.title;
 
 const jsonLd = {
 	"@context": "https://schema.org",
