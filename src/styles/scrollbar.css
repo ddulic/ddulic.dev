@@ -1,24 +1,30 @@
+@reference "../styles/main.css";
+
 .scrollbar-base.os-scrollbar {
     @apply transition-all;
     pointer-events: unset;
 
     &.os-scrollbar-horizontal {
-        @apply py-1 px-2 h-4;
+        height: 1rem;
+        padding: 0.25rem 0.5rem;
         .os-scrollbar-track .os-scrollbar-handle {
-            @apply rounded-full h-1;
+            @apply rounded-full;
+            height: 0.25rem;
         }
         &:hover .os-scrollbar-track .os-scrollbar-handle {
-            @apply h-2;
+            height: 0.5rem;
         }
     }
 
     &.os-scrollbar-vertical {
-        @apply px-1 py-1 w-4;
+        width: 1rem;
+        padding: 0.25rem;
         .os-scrollbar-track .os-scrollbar-handle {
-            @apply rounded-full w-1;
+            @apply rounded-full;
+            width: 0.25rem;
         }
         &:hover .os-scrollbar-track .os-scrollbar-handle {
-            @apply w-2;
+            width: 0.5rem;
         }
     }
 }

@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 import path from "node:path";
 import { Icon } from "astro-icon/components";
 import I18nKey from "../i18n/i18nKey";
@@ -36,8 +37,8 @@ const {
 } = Astro.props;
 const className = Astro.props.class;
 
-const entryData = entry.data as PostData;
 const hasCover = image !== undefined && image !== null && image !== "";
+const { remarkPluginFrontmatter } = await render(entry);
 
 const coverWidth = "28%";
 ---
@@ -60,17 +61,17 @@ const coverWidth = "28%";
 
         <!-- description -->
         <div class:list={["transition text-75 mb-3.5 pr-4", {"line-clamp-2 md:line-clamp-1": !description}]}>
-            { description || entryData.description }
+            { description || remarkPluginFrontmatter.excerpt }
         </div>
 
         <!-- word count and read time  -->
         <div class="text-sm text-black/30 dark:text-white/30 flex gap-4 transition">
             <div>
-                {description ? description.split(' ').length : 0} {" " + i18n(I18nKey.wordsCount)}
+                {remarkPluginFrontmatter.words} {" " + i18n(remarkPluginFrontmatter.words === 1 ? I18nKey.wordCount : I18nKey.wordsCount)}
             </div>
             <div>|</div>
             <div>
-                {Math.ceil((description ? description.split(' ').length : 0) / 200)} {" " + i18n(I18nKey.minutesCount)}
+                {remarkPluginFrontmatter.minutes} {" " + i18n(remarkPluginFrontmatter.minutes === 1 ? I18nKey.minuteCount : I18nKey.minutesCount)}
             </div>
         </div>
 

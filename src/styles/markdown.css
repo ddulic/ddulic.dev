@@ -1,27 +1,32 @@
+@reference "../styles/main.css";
+
 .custom-md {
     h1 {
-        @apply text-3xl;
+        font-size: 1.875rem;
+        line-height: 2.25rem;
     }
 
     h1, h2, h3, h4, h5, h6 {
         .anchor {
-            @apply transition -m-0.5 ml-[0.2ch] p-0.5 select-none opacity-0 no-underline !important;
+            @apply transition -m-0.5 ml-[0.2ch] select-none opacity-0 no-underline;
+            padding: 0.125rem;
 
             .anchor-icon {
-                @apply mx-[0.45ch] !important;
+                @apply mx-[0.45ch];
             }
         }
 
         &:hover {
             .anchor {
-                @apply opacity-100 !important;
+                @apply opacity-100;
             }
         }
     }
 
     a:not(.no-styling) {
-        @apply relative bg-none font-medium text-[var(--primary)]
+        @apply relative bg-none text-[var(--primary)]
         underline decoration-[var(--link-underline)] decoration-1 decoration-dashed underline-offset-4;
+        font-weight: 500;
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
         display: inline-block;
@@ -35,7 +40,8 @@
     }
 
     code {
-        @apply bg-[var(--inline-code-bg)] text-[var(--inline-code-color)] px-1 py-0.5 rounded-sm overflow-hidden;
+        @apply bg-[var(--inline-code-bg)] text-[var(--inline-code-color)] rounded-sm overflow-hidden;
+        padding: 0.25rem 0.5rem;
 
         font-family: 'JetBrains Mono Variable', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
         &:before {
@@ -48,7 +54,8 @@
         counter-reset: line;
         span.line {
             &:before {
-                @apply text-white/25 mr-4 w-4 inline-block;
+                @apply text-white/25 w-4 inline-block;
+                margin-right: 1rem;
                 content: counter(line);
                 counter-increment: line;
                 direction: rtl;
@@ -61,14 +68,31 @@
 
     .copy-btn {
         all: initial;
-        @apply flex items-center justify-center bg-[oklch(0.45_0.01_var(--hue))] hover:bg-[oklch(0.50_0.01_var(--hue))] active:bg-[oklch(0.55_0.01_var(--hue))] dark:bg-[oklch(0.30_0.02_var(--hue))] dark:hover:bg-[oklch(0.35_0.03_var(--hue))] dark:active:bg-[oklch(0.40_0.03_var(--hue))] opacity-0 absolute active:scale-90 h-8 w-8 top-3 right-3 text-sm rounded-sm transition-all ease-in-out z-20 cursor-pointer;
+        @apply flex items-center justify-center opacity-0 absolute active:scale-90 h-8 w-8 top-3 right-3 text-sm rounded-sm transition-all ease-in-out z-20 cursor-pointer;
+        background-color: oklch(0.45 0.01 var(--hue));
+    }
+    .copy-btn:hover {
+        background-color: oklch(0.50 0.01 var(--hue));
+    }
+    .copy-btn:active {
+        background-color: oklch(0.55 0.01 var(--hue));
+    }
+    .dark .copy-btn {
+        background-color: oklch(0.30 0.02 var(--hue));
+    }
+    .dark .copy-btn:hover {
+        background-color: oklch(0.35 0.03 var(--hue));
+    }
+    .dark .copy-btn:active {
+        background-color: oklch(0.40 0.03 var(--hue));
     }
     .frame:hover .copy-btn {
         opacity: 1;
     }
 
     .copy-btn-icon {
-        @apply absolute top-1/2 left-1/2 transition -translate-x-1/2 -translate-y-1/2 w-4 h-4 fill-white pointer-events-none;
+        @apply absolute top-1/2 left-1/2 transition w-4 h-4 fill-white pointer-events-none;
+        transform: translate(-50%, -50%);
     }
     .copy-btn .copy-icon {
         @apply opacity-100 fill-white dark:fill-white/75;

@@ -3,6 +3,23 @@ import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import { getCategoryUrl } from "@utils/url-utils.ts";
 
+// Define PostData type to match the global interface
+type PostData = {
+	title: string;
+	published: Date;
+	description?: string;
+	tags: string[];
+	category?: string | null;
+	draft?: boolean;
+	image?: string | null;
+	prevTitle?: string;
+	prevSlug?: string;
+	nextTitle?: string;
+	nextSlug?: string;
+	updated?: Date;
+	lang?: string;
+};
+
 // // Retrieve posts and sort them by publication date
 async function getRawSortedPosts() {
 	const allBlogPosts = await getCollection("posts", (post) => {

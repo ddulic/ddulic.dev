@@ -1,7 +1,13 @@
 import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
 const postsCollection = defineCollection({
+	loader: glob({
+		pattern: "**/*.{md,mdx}",
+		base: "./src/content/posts",
+		generateId: ({ entry }) => entry.replace(/\.(mdx?)$/, ""),
+	}),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
@@ -22,8 +28,14 @@ const postsCollection = defineCollection({
 		}),
 });
 const specCollection = defineCollection({
+	loader: glob({
+		pattern: "**/*.{md,mdx}",
+		base: "./src/content/spec",
+		generateId: ({ entry }) => entry.replace(/\.(mdx?)$/, ""),
+	}),
 	schema: ({ image }) =>
 		z.object({
+			title: z.string().optional(),
 			image: image().optional(),
 		}),
 });

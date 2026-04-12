@@ -1,8 +1,5 @@
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
-import tailwind from "@astrojs/tailwind";
-import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
-import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import swup from "@swup/astro";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
@@ -15,6 +12,8 @@ import remarkDirective from "remark-directive"; /* Handle directives */
 import remarkGithubAdmonitionsToDirectives from "remark-github-admonitions-to-directives";
 import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
+import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
+import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import { expressiveCodeConfig } from "./src/config.ts";
 import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
 import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs";
@@ -31,9 +30,6 @@ export default defineConfig({
 	site: "https://ddulic.dev",
 	trailingSlash: "always",
 	integrations: [
-		tailwind({
-			nesting: true,
-		}),
 		swup({
 			theme: false,
 			animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
