@@ -1,7 +1,7 @@
 ---
 title: "Test Auto Enrich"
 published: 2026-04-13
-description: "This is a test post to verify the auto-enrich workflow skips posts with all fields populated."
+description: ""
 tags: [DevOps, Linux]
 category: Testing
 draft: false
