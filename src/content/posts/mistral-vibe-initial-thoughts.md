@@ -1,11 +1,11 @@
-—--
+---
 title: “The Good, the Buggy, and the Unfinished: Testing Mistral Vibe”
 published: 2026-04-12
 description:
 tags: []
 category:
 draft: false
-—--
+---
 
 After using [Mistral Vibe](https://github.com/mistralai/mistral-vibe) for a few dozen hours, I can say it’s not yet as polished as Claude Code, the last coding tool I used.
 
