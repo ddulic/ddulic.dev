@@ -28,13 +28,32 @@ jobs:
           echo "files=$changed" >> $GITHUB_OUTPUT
           echo "Changed posts: $changed"
 
+      - name: Check if enrichment needed
+        id: needs-enrich
+        if: steps.changed-posts.outputs.files != ''
+        run: |
+          needs=false
+          for f in ${{ steps.changed-posts.outputs.files }}; do
+            if [ ! -f "$f" ]; then continue; fi
+            desc=$(awk '/^---/{p++} p==1 && /^description:/{print}' "$f")
+            tags=$(awk '/^---/{p++} p==1 && /^tags:/{print}' "$f")
+            cat=$(awk '/^---/{p++} p==1 && /^category:/{print}' "$f")
+            # empty if field missing, value is "", [], or whitespace-only after colon
+            if [ -z "$desc" ] || echo "$desc" | grep -qE 'description:\s*""?\s*$'; then needs=true; break; fi
+            if [ -z "$tags" ] || echo "$tags" | grep -qE 'tags:\s*\[\s*\]\s*$'; then needs=true; break; fi
+            if [ -z "$cat" ] || echo "$cat" | grep -qE 'category:\s*""?\s*$'; then needs=true; break; fi
+          done
+          echo "needed=$needs" >> $GITHUB_OUTPUT
+          echo "Enrichment needed: $needs"
+
       - name: Configure git
+        if: steps.needs-enrich.outputs.needed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Auto-enrich blog posts
-        if: steps.changed-posts.outputs.files != ''
+        if: steps.needs-enrich.outputs.needed == 'true'
         uses: anthropics/claude-code-action@main
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
