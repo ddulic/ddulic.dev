@@ -1,3 +1,7 @@
+---
+title: "About"
+---
+
 # $ whoami
 
 Hey, I'm **Damir** — a Systems engineer & team lead based in the UK, and this is my corner of the internet.

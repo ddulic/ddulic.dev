@@ -1,9 +1,9 @@
 ---
-title: “The Good, the Buggy, and the Unfinished: Testing Mistral Vibe”
+title: "The Good, the Buggy, and the Unfinished: Testing Mistral Vibe"
 published: 2026-04-12
-description:
-tags: []
-category:
+description: "First impressions of Mistral Vibe after dozens of coding hours, highlighting bugs, memory gaps, stability issues, and how it compares to Claude Code."
+tags: [Productivity, DevOps]
+category: AI
 draft: false
 ---
 
