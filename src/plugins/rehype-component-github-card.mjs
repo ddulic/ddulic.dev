@@ -23,6 +23,13 @@ export function GithubCardComponent(properties, children) {
 			'Invalid repository. ("repo" attributte must be in the format "owner/repo")',
 		);
 
+	if (!/^[a-zA-Z0-9_.-]+\/[a-zA-Z0-9_.-]+$/.test(properties.repo))
+		return h(
+			"div",
+			{ class: "hidden" },
+			'Invalid repository. ("repo" must only contain alphanumeric characters, hyphens, underscores, and dots)',
+		);
+
 	const repo = properties.repo;
 	const cardUuid = `GC${randomBytes(6).toString("base64url").slice(0, 6)}`; // Collisions are not important
 

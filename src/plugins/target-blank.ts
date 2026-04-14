@@ -13,6 +13,7 @@ export const targetBlank = ({ domain = "" }: { domain?: string } = {}) => {
 				!e.properties.href.toString().includes(domain)
 			) {
 				e.properties.target = "_blank";
+				e.properties.rel = "noopener noreferrer";
 			}
 		});
 	};

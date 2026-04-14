@@ -24,6 +24,4 @@ updates:
           - "minor"
     pull-request-branch-name:
       separator: "-"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 5

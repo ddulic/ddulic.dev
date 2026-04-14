@@ -9,7 +9,6 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  id-token: write
 
 jobs:
   auto-enrich:
@@ -54,7 +53,7 @@ jobs:
 
       - name: Auto-enrich blog posts
         if: steps.needs-enrich.outputs.needed == 'true'
-        uses: anthropics/claude-code-action@main
+        uses: anthropics/claude-code-action@65f29cf68ec4ac36c154e96804534ec0b029bbc2 # main
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           settings: |
