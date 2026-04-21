@@ -29,7 +29,7 @@ The less obvious one is TTFT. Sonnet starts streaming within 500–800ms; Opus c
 Anthropic shipped a `speed: "fast"` parameter on Opus 4.6 that delivers up to 2.5x faster output at 6x the base price. [3] Same model, same intelligence, faster inference. It's the "I need Opus reasoning without Opus latency" escape hatch.
 
 :::warning
-Fast Mode runs at $30/$150 per million tokens — the most expensive way to run Claude. Use it when Opus latency is actively hurting the workflow, not because the option is there.
+Fast Mode runs at \$30/\$150 per million tokens — the most expensive way to run Claude. Use it when Opus latency is actively hurting the workflow, not because the option is there.
 :::
 
 # The Token Count Twist
