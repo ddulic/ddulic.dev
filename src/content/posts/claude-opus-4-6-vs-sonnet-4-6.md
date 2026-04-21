@@ -60,6 +60,9 @@ Default to Sonnet. Escalate to Opus when the task complexity actually warrants i
 ---
 
 [1] [Artificial Analysis LLM Leaderboard](https://artificialanalysis.ai/leaderboards/models)
+
 [2] [Artificial Analysis — Claude Sonnet 4.6 performance](https://artificialanalysis.ai/models/claude-sonnet-4-6-adaptive)
+
 [3] [Anthropic — Fast Mode documentation](https://platform.claude.com/docs/en/build-with-claude/fast-mode)
+
 [4] [Claude Opus 4.5 token efficiency breakdown](https://claudefa.st/blog/models/claude-opus-4-5)
