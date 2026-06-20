@@ -30,3 +30,8 @@ yarn.lock
 .idea
 *.iml
 .vscode
+
+# agent config
+.cursorrules
+AGENTS.md
+CLAUDE.md
