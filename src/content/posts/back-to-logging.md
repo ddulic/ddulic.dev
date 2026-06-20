@@ -17,7 +17,7 @@ Until the latest generation of AI came along. I downloaded the blog content zip 
 
 One of the reasons I switched from Hexo and Hugo back in the day was that I didn’t want to mess around with HTML, CSS, JS, or any framework. I don’t care about those technologies, and I don’t want to spend an hour figuring out how to center a div. Making these types of small tweaks with AI is easy, and it does them quickly. I’ve gone full circle.
 
-Another thing I disliked was all the SEO and categorization. I just want to write and not think about those things. Well, that is also straightforward now with a custom workflow—[auto-enrich.yaml](https://github.com/ddulic/ddulic.dev/blob/main/.github/workflows/auto-enrich.yml).
+Another thing I disliked was all the SEO and categorization. I just want to write and not think about those things. Well, that is also straightforward now with a custom AI skill that enriches each post's tags, category, and description and tidies up image filenames for me.
 
 The test was successful. AI can be a force for good, allowing us to spend time doing things we want instead of wasting hours trying to figure something out that will likely be replaced in a few years. If that happens, migrating is easy now. We just have to adapt our workflows and learn its ways.
 
